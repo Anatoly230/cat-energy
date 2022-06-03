@@ -1,0 +1,83 @@
+@import "global-variables";
+
+:root {
+  box-sizing: border-box;
+  font-size: calc($root-font-size / $initial-font-size) + em;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "ptsansB";
+  src: local("ptsansB"), url("../fonts/ptsansb.woff2") format("woff2"), url("../fonts/ptsansb.woff") format("woff");
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "ptsans";
+  src: local("ptsans"), url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  line-height: 1;
+}
+
+// text apparence
+.normal-text {
+  text-transform: initial;
+}
+
+.text-color-invert {
+  color: $invert-color;
+}
+
+.heading-small {
+  @include heading-style;
+}
+
+.heading-medium {
+  @include heading-style(rem(18));
+
+  @media (min-width: $tablet-width) {
+    font-size: rem(21);
+  }
+}
+
+.heading-large {
+  @include heading-style(rem(18));
+
+  @media (min-width: $tablet-width) {
+    font-size: rem(30);
+  }
+}
+
+.heading-Xlarge {
+  @include heading-style(rem(21));
+
+  @media (min-width: $tablet-width) {
+    font-size: rem(30);
+  }
+}

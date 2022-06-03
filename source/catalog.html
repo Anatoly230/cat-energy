@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Каталог питания</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/font.woff2" as="font">
+  <link rel="preload" href="fonts/font.woff" as="font">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/icons/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/icons/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
+
+<body class="page__body page-body">
+
+  <header class="page-body__header main-header">
+    <nav class="main-nav main-header__wrapper">
+      <a class="main-nav__logo logo " href="#">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/icons/sprite/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/icons/sprite/logo-tablet.svg">
+          <img class="logo__pic" src="img/icons/sprite/logo-mobile.svg" alt="логотип компании cat energy" width="191"
+            height="37">
+        </picture>
+
+      </a>
+      <menu class="main-nav__menu menu">
+        <li class="menu__item menu__item--current menu__first">
+          <a class="menu__item-link" href="#">Главная</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__item-link" href="#">Каталог продукции</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__item-link" href="#">Подбор программы</a>
+        </li>
+      </menu>
+      <button class="main-nav__togle-menu togle-menu"><span class=" visually-hidden">Закрыть</span></button>
+    </nav>
+  </header>
+
+  <main class="page__content catalog ">
+    <h1 class="catalog__title">Каталог продукции</h1>
+    <section class="catalog__assortment assortment">
+      <h2 class="visually-hidden">Ассортимент</h2>
+      <ul class="assortment__list">
+        <li class="assortment__list-item card">
+          <picture>
+
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/catalog/tablet-catalog-1-1.webp, img/catalog/tablet-catalog-1-1@2x.webp 2x">
+            <source type="image/png" media="(min-width: 768px)"
+              srcset="img/catalog/mobile-tablet-1-1.png, img/catalog/tablet-catalog-1-1@2x.png 2x">
+            <img class="card__pic" src="img/catalog/mobile-catalog-1-1.png"
+              srcset="img/catalog/mobile-catalog-1-1@2x.png 2x" alt="Cat Energy" width="140" height="76">
+          </picture>
+          <div class="card__info-wrapper">
+            <p class="card__heading">Cat Energy PRO 500 г</p>
+            <dl class="card__parametrs-list">
+              <div class="card__parametrs-wrapper">
+                <dt class="card__parametrs-name">Масса</dt>
+                <dd class="card__parametrs-value">500 г</dd>
+              </div>
+              <div class="card__parametrs-wrapper">
+                <dt class="card__parametrs-name">Вкус</dt>
+                <dd class="card__parametrs-value">Курица</dd>
+              </div>
+              <div class="card__parametrs-wrapper">
+                <dt class="card__parametrs-name">Цена</dt>
+                <dd class="card__parametrs-value">700 Р.</dd>
+              </div>
+            </dl>
+          </div>
+          <a href="#" class="card__buy-link">Заказать</a>
+        </li>
+        <li class="assortment__list-item card">
+          <picture>
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/catalog/tablet-catalog-1-2.webp, img/catalog/tablet-catalog-1-2@2x.webp 2x">
+            <source type="image/png" media="(min-width: 768px)"
+              srcset="img/catalog/tablet-catalog-1-2.png, img/catalog/tablet-catalog-1-2@2x.png 2x">
+            <img class="card__pic" src="img/catalog/mobile-catalog-1-2.png"
+              srcset="img/catalog/mobile-catalog-1-2@2x.png 2x" alt="Cat Energy" width="140" height="76">
+          </picture>
+          <div class="card__info-wrapper">
+            <p class="card__heading">Cat Energy PRO 1000 г</p>
+            <dl class="card__parametrs-list">
+              <div class="card__parametrs-wrapper">
+                <dt class="card__parametrs-name">Масса</dt>
+                <dd class="card__parametrs-value">1000 г</dd>
+              </div>
+              <div class="card__parametrs-wrapper">
+                <dt class="card__parametrs-name">Вкус</dt>
+                <dd class="card__parametrs-value">Курица</dd>
+              </div>
+              <div class="card__parametrs-wrapper">
+                <dt class="card__parametrs-name">Цена</dt>
+                <dd class="card__parametrs-value">1000 Р.</dd>
+              </div>
+            </dl>
+          </div>
+          <a href="#" class="card__buy-link">Заказать</a>
+        </li>
+      </ul>
+
+    </section>
+  </main>
+
+  <footer class="page-body__footer main-footer">
+    <a href="#" class="main-footer__logo-link">
+      <span class="visually-hiddan">перейти на главную</span>
+      <svg class="main-footer__logo-pic" width="128" height="24">
+        <use xlink:href="img/icons/sprite/sprite.svg#logo-footer"></use>
+      </svg>
+    </a>
+    <ul class="main-footer__social-list social-list">
+      <li class="social-list__item">
+        <a class="social-list__item-link" href="#">
+          <span class="visually-hiddan">мы во Вконтакте</span>
+          <svg class="social-list__item-pic" width="26" height="17">
+            <use xlink:href="img/icons/sprite/sprite.svg#vk"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a class="social-list__item-link" href="#">
+          <span class="visually-hiddan">мы на Youtube</span>
+          <svg class="social-list__item-pic" width="24" height="19">
+            <use xlink:href="img/icons/sprite/sprite.svg#yt"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a class="social-list__item-link" href="#">
+          <span class="visually-hiddan">наш канал в телеграмм</span>
+          <svg class="social-list__item-pic" width="20" height="17">
+            <use xlink:href="img/icons/sprite/sprite.svg#tm"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <a class="main-footer__devs-link" href="#">
+      <span class="main-footer__devs">HTML Academy</span>
+      <svg class="main-footer__devs-logo" width="27" height="34">
+        <use xlink:href="img/icons/sprite/sprite.svg#academy"></use>
+      </svg>
+    </a>
+  </footer>
+
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>

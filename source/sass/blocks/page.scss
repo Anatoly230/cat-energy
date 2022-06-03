@@ -1,0 +1,40 @@
+.page {
+  min-width: rem(210);
+  height: 100%;
+  background: $page-clr;
+}
+
+.page-body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr min-content;
+  min-height: 100%;
+  font-family: "ptsans", "Arial", sans-serif;
+  font-size: 1rem;
+  line-height: $common-line-height;
+  background: $main-bg-color;
+  color: $page-font-color;
+
+  @include wrapper;
+
+  @media (min-width: $desktop-width) {
+    box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+  }
+}
+
+.page-body__header {
+  grid-area: header;
+  min-height: rem(56);
+}
+
+.page__content {
+  grid-area: content;
+}
+
+.page-body__footer {
+  grid-area: footer;
+}

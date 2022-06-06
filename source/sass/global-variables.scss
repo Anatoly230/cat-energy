@@ -2,48 +2,24 @@
 $mobile-width: 320px;
 $mobile-only: 767px;
 $tablet-width: 768px;
-$not-bigger-of-tablet: 1199px;
-$desktop-width: 1200px;
+$desktop-width: 1440px;
 
 // colors
-$page-clr: #f2f2f2;
-$main-bg-color: #ffffff;
-$map-bg-color: #f1f3f4;
-$main-img-bg-color: #5d8fb7;
-$die-color: #81b3d2; /*$die-color*/
-$neutral-die-color: #eeeeee;  /*$neutral-die-color*/
-$light-neutral-color: #f2f2f2;
-$invert-color: $main-bg-color;
-$page-font-color: #000000;
-$current-link-clr: #766357;
-$shadow-color: $page-font-color;
-$fadded-color: #dbdbdb;
-$input-color: #f2f2f2;
-$field-pic-bg: #e6e6e6;
-$disabled-clr: #333333;
-$undelines-clr: #d6d6d6;
-// button colors
-$btn-hover-bg: #669ec0;
-$btn-active-bg: #5496bd;
-$btn-dsbled-bg: #e5e5e5;
-$middle-grey: #eaeaea;
-
-
-// menu colors
-$menu-hover: #81b3d2;
-
-$mob-men-hover: #669ec0;
-$mob-men-active: #5496bd;
-
-$academy-hover: #b1d3d2;
-$academy-active: #b3b3b3;
-
-$mob-m-font: #ffffff;
-// blocks measures
-$btn-height: 58px;
+$white: #ffffff;
+$black: #000000;
+$base-green: #68b738;
+$green-darker: #5eaa2f;
+$base-gray: #cdcdcd;
+$pale-gray:#f2f2f2;
+$light-gray: #ebebeb;
+$dark-gray: #666666;
+$off-black: #444444;
+$graphite-black: #222222;
+$status-error: #ff8282;
 
 // font parametrs
 $initial-font-size: 16;
 $root-font-size: 14;
 $common-line-height: 1.5;
 $heading-line-height: 1.86;
+

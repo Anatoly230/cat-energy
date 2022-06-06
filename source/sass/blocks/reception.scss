@@ -1,0 +1,138 @@
+.reception {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.reception--last {
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    @include adapt-width($tablet-width, 648px);
+    min-width: rem(648);
+    max-width: rem(768);
+    align-self: center;
+  }
+}
+
+.reception__label {
+  padding-left: rem(16);
+}
+
+.reception__label--choose {
+  font-weight: bold;
+  font-size: rem(18);
+  padding-left: 0;
+}
+
+.reception__field {
+  padding: rem(16);
+  margin: 0;
+  border: 4px solid transparent;
+  background-color: $input-color;
+  color: $page-font-color;
+  font-weight: bold;
+  font-size: rem(18);
+  width: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.reception__field::placeholder {
+  color: rgba($page-font-color, 0.3);
+}
+
+.reception__field:hover {
+  background-color: $btn-dsbled-bg;
+}
+
+.reception__field:active {
+  background-color: $main-bg-color;
+  border-color: $btn-dsbled-bg;
+}
+
+.reception__pic-wraper {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.reception__pic {
+  background-color: $field-pic-bg;
+  flex-basis: rem(58);
+  flex-grow: 0;
+  flex-shrink: 0;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reception__choose {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.reception__thing {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: rem(46);
+  height: rem(46);
+  background-color: $input-color;
+  margin-right: rem(16);
+  border-radius: 4px;
+}
+
+.reception__thing--radio {
+  border-radius: 50%;
+}
+
+.reception__thing::after {
+  display: inline-block;
+  margin: 0 auto;
+  content: "";
+  opacity: 0;
+}
+
+.reception__thing--radio::after {
+  width: rem(14);
+  height: rem(14);
+  border-radius: 50%;
+  border: none;
+  background-color: #000000;
+}
+
+.reception__thing--checkbox::after {
+  width: rem(20);
+  height: rem(14);
+  border-bottom: 3px solid #000000;
+  border-left: 3px solid #000000;
+  transform: rotate(315deg);
+}
+
+.reception__choose:checked + .reception__label > .reception__thing::after {
+  opacity: 1;
+}
+
+.reception__choose:focus + .reception__label {
+  outline: 2px solid #000000;
+  outline-offset: inset 2px;
+}
+
+.reception__label:hover .reception__thing {
+  background-color: $btn-dsbled-bg;
+}
+
+.reception__label:active .reception__thing--radio::after {
+  background-color: rgba($page-font-color, 0.3);
+}
+
+.reception__label:active .reception__thing--checkbox::after {
+  border-color: rgba(#000000, 0.3);
+}

@@ -1,7 +1,7 @@
 .page {
   min-width: rem(210);
   height: 100%;
-  background: $page-clr;
+  background: $white;
 }
 
 .page-body {
@@ -16,8 +16,8 @@
   font-family: "oswaldR", "Arial", sans-serif;
   font-size: 1rem;
   line-height: $common-line-height;
-  background: $main-bg-color;
-  color: $page-font-color;
+  background: $white;
+  color: $black;
 
   @include wrapper;
 

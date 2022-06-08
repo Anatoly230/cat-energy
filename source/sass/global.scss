@@ -46,39 +46,3 @@ img {
   line-height: 1;
 }
 
-// text apparence
-.normal-text {
-  text-transform: initial;
-}
-
-.text-color-invert {
-  color: $white;
-}
-
-.heading-small {
-  @include heading-style;
-}
-
-.heading-medium {
-  @include heading-style(rem(18));
-
-  @media (min-width: $tablet-width) {
-    font-size: rem(21);
-  }
-}
-
-.heading-large {
-  @include heading-style(rem(18));
-
-  @media (min-width: $tablet-width) {
-    font-size: rem(30);
-  }
-}
-
-.heading-Xlarge {
-  @include heading-style(rem(21));
-
-  @media (min-width: $tablet-width) {
-    font-size: rem(30);
-  }
-}

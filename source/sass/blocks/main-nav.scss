@@ -1,0 +1,15 @@
+.main-nav {
+@include show-outline(violet);
+
+@include tablet {
+display: flex;
+}
+}
+
+.main-nav__togle-menu {
+
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}

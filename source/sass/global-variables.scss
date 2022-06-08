@@ -1,8 +1,14 @@
 // devices
-$mobile-width: 320px;
-$mobile-only: 767px;
-$tablet-width: 768px;
+$mobile-min: 320px;
+$mobile-max: 767px;
+$tablet-min: 768px;
+$tablet-max: 1439px;
 $desktop-width: 1440px;
+
+// на удаление start
+$mobile-width: 320px;
+$tablet-width: 768px;
+// на удаление end
 
 // colors
 $white: #ffffff;
@@ -20,6 +26,5 @@ $status-error: #ff8282;
 // font parametrs
 $initial-font-size: 16;
 $root-font-size: 14;
-$common-line-height: 1.5;
 $heading-line-height: 1.86;
 

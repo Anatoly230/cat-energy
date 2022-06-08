@@ -1,0 +1,27 @@
+
+.logo {
+
+
+  &__pic {
+    width: rem(33);
+    height: rem(37);
+    margin-right: rem(14);
+
+    @include tablet {
+      width: rem(174);
+      height: rem(52);
+    }
+
+    @include desktop {
+      width: rem(202);
+      height: rem(59);
+    }
+
+  }
+
+  &__pic-title {
+    @include tablet {
+      display: none;
+    }
+  }
+}

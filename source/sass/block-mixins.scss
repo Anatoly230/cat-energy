@@ -1,0 +1,33 @@
+@mixin wrapper() {
+  width: 100%;
+  max-width: $desktop-width;
+  margin: 0 auto;
+  // @include show-outline(2px, green);
+}
+
+@mixin block-width($current-media, $mxWidth) {
+  width: calc($mxWidth / $current-media * 100%);
+}
+
+@mixin part-of-block($parts, $share:1) {
+  width: calc(100 / $parts * $share) * 1%;
+}
+@mixin padding-resset() {
+  padding: 0;
+}
+
+@mixin margin-resset() {
+  margin: 0;
+}
+
+@mixin reset-list-style() {
+  list-style: none;
+  padding: 0;
+}
+
+// for block debug start
+@mixin show-outline($color: red, $weight: 2px) {
+  outline: $weight dashed $color;
+  outline-offset: -$weight;
+}
+// for block debug end

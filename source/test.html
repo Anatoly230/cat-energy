@@ -20,7 +20,7 @@
     <header class="page-body__header main-header">
       <nav class="main-nav">
         <div class="main-nav__togles-wrapper">
-          <a class="main-nav__logo logo " href="#">
+          <a class="main-nav__logo main-nav__logo logo " href="#">
             <span class="visually-hidden">перейти на главную</span>
             <picture>
               <source media="(min-width: 1440px)" srcset="img/icons/sprite/logo-desktop.svg">
@@ -29,15 +29,16 @@
                 height="48">
             </picture>
           </a>
-
+          <a class="main-nav__logo main-nav__logo-title" href="#">
           <svg class="logo__pic-title" width="101" height="18">
             <use xlink:href="img/icons/sprite/sprite.svg#logo-title"></use>
           </svg>
+          </a>
           <button class="main-nav__togle-menu togle-menu"><span class=" visually-hidden">Закрыть</span></button>
         </div>
         <menu class="main-nav__menu menu">
-          <li class="menu__item menu__item--current">
-            <a class="menu__item-link" href="#">Главная</a>
+          <li class="menu__item">
+            <a class="menu__item-link menu__item-link--current" href="#">Главная</a>
           </li>
           <li class="menu__item">
             <a class="menu__item-link" href="catalog.html">Каталог продукции</a>
@@ -51,7 +52,7 @@
 
     <section class="page__promo promo">
       <h2 class="promo__title">Функциональное<br>питание для котов</h2>
-      <p class="promo__desc">Занялся собой? Займись котом!</p>
+         <p class="promo__desc">Занялся собой? Займись котом!</p>
 
       <picture>
         <source type="image/webp" media="(min-width: 1440px)"
@@ -69,7 +70,7 @@
       <a href="#" class="promo__link btn">Подобрать программу</a>
     </section>
   </div>
-  <div class="page__content content">
+  <!-- <main class="page__content content">
     <h1 class="visually-hidden">Полезное питание для кошек</h1>
     <section class="content__description description">
       <h2 class="visually-hidden">Описание программ питания</h2>
@@ -187,7 +188,7 @@
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
-    </main>
+    </main> -->
 
     <footer class="page-body__footer main-footer">
       <a href="#" class="main-footer__logo-link">

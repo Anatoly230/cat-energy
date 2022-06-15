@@ -1,0 +1,31 @@
+
+.promo {
+display: flex;
+flex-direction: column;
+align-items: center;
+    
+&__title {
+margin-top: rem(27);
+margin-bottom: rem(25);
+font-size: rem(36);
+@include tablet {
+    font-size: rem(60);
+}
+    }
+
+    &__desc {
+        margin-bottom: rem(29);
+
+        @include tablet {
+            font-size: rem(20);
+           
+        }       
+    }
+
+    &__pic {
+        margin-bottom: rem(29);
+    }
+
+    &__link {
+    }
+}

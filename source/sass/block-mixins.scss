@@ -1,6 +1,7 @@
-@mixin wrapper() {
+
+@mixin wrapper($content-width: $max-content-width) {
   width: 100%;
-  max-width: $desktop-width;
+  max-width: $content-width;
   margin: 0 auto;
   // @include show-outline(2px, green);
 }

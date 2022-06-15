@@ -5,6 +5,7 @@
 }
 
 .page-body {
+  overflow-x: hidden;
   display: grid;
   grid-template-areas:
     "header"
@@ -16,9 +17,13 @@
   font-family: "oswaldR", "Arial", sans-serif;
   background: $white;
   color: $black;
-@include common-text;
-  @include wrapper;
   font-weight: 400;
+  line-height: calc(18/14);
+
+  @include tablet {
+    font-size: rem(16);
+    line-height: calc(24/16);
+  }
 }
 
 .page-body__header {

@@ -1,8 +1,14 @@
 // media queries start
 
 
-@mixin mobile-only {
+@mixin mobile {
   @media (max-width: $mobile-max) {
+    @content;
+  }
+}
+
+@mixin mobile-only {
+  @media (max-width: $mobile-min) and (max-width: $mobile-max) {
     @content;
   }
 }

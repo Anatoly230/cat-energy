@@ -1,0 +1,34 @@
+$title-color: black;
+$title-bg-color: white;
+$title-font-size: 30px;
+
+$line-color: red;
+$line-weight: 2px;
+$indent-to-line: 20px;  
+
+
+.accent-title {
+        color: $title-color;
+        position: relative;
+        font-size: $title-font-size;
+
+        &::before {
+            z-index: 1;
+            position: absolute;
+            content: "";
+            width: 100vw;
+            height: $line-weight;
+            top: calc(1em - 1ex / 2);
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $line-color;
+        }
+        &-text {
+            z-index: 2;
+            position: relative;
+            padding: 0 $indent-to-line; 
+            margin-left: -$indent-to-line;
+            background-color: $title-bg-color;
+        }
+        
+    }

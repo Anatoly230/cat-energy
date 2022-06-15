@@ -1,9 +1,10 @@
 .btn {
   display: block;
 
-  @include block-width($mobile-width, 230px);
+  width: 100%;
   font-size: 1.5rem;
-  font-weight: bold;
+  text-transform: uppercase;
+  font-weight: 400;
   background-color: $base-green;
   color: $white;
   text-decoration: none;

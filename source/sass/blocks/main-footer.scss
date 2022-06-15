@@ -1,0 +1,54 @@
+
+.main-footer {
+    background-color: $pale-gray;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+@include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+}
+    &__logo-link {
+    }
+
+    &__logo-pic {
+    }
+
+    &__social-list {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__devs-link {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet {
+            width: auto;
+        }
+    }
+
+    &__devs {
+    }
+
+    &__devs-logo {
+    }
+}
+
+
+
+.social-list {
+padding: 0;
+    &__item {
+ @include reset-list-style;
+    }
+
+    &__item-link {
+    }
+
+    &__item-pic {
+    }
+
+}

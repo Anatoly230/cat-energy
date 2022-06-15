@@ -1,11 +1,8 @@
 .main-header {
   background-color: $white;
-
-  @include show-outline;
-
-  @media (min-width: $tablet-width) {
-    @include padding-resset;
-  }
+  // @include tablet {
+  //   @include padding-resset;
+  // }
 }
 
 // .main-header__wrapper {
@@ -16,9 +13,3 @@
 //     @include padding-resset;
 //   }
 // }
-
-.main-header__togles-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}

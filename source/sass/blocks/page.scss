@@ -26,7 +26,48 @@
   }
 }
 
+.page-body--index {
+  grid-template-areas:
+    "header-wraper"
+    "content"
+    "footer";
+}
+
+.page__promo {
+z-index: 1;
+}
+
+.page-body__header-wrapper {
+  z-index: 2;
+  grid-area: header-wraper;
+ position: relative;
+}
+
+
+.page-body__header-wrapper::before{
+  @include desktop {
+    z-index: 0;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: $green-promo-bg;
+    background-image: url('../img/background/desktop-cat-bg.jpg');
+    background-position: right top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    @media (min-resolution: 2dppx) {
+      background-image: url('../img/background/desktop-cat-bg@2x.jpg');
+    }
+  }
+}
+
 .page-body__header {
+  position: relative;
+  z-index: 2;
   grid-area: header;
   min-height: rem(56);
 }
@@ -35,6 +76,8 @@
   grid-area: content;
 }
 
+
 .page-body__footer {
   grid-area: footer;
+
 }

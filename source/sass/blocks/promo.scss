@@ -1,31 +1,127 @@
 
 .promo {
-display: flex;
-flex-direction: column;
-align-items: center;
+    position: relative;
+
+    @include tablet {
+        @include section-wrapper;
+    }
     
-&__title {
-margin-top: rem(27);
-margin-bottom: rem(25);
-font-size: rem(36);
-@include tablet {
-    font-size: rem(60);
-}
+    &::before {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        content: "";
+        display: block;
+        width: 100%;
+        height: calc(302 / 480 * 100%);
+        background-image: url('../img/background/mobile-cat-bg.jpg');
+        background-color: $green-promo-bg;
+        background-position: center top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        @media (min-resolution: 2dppx) {
+            background-image: url('../img/background/mobile-cat-bg@2x.jpg');
+        }    
+        
+        @include tablet {
+            background-color: transparent;
+            background-image: none;
+        }
     }
 
+&__content-wrapper {
+    @include section-wrapper;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet {
+        display: inline-block;
+        margin: 0;
+        width: auto;
+        align-items: flex-start;
+        padding-left: rem(120);
+    }
+
+}
+
+&__title {
+    position: relative;
+    z-index: 1;
+    color: $white;
+    text-align: center;
+    margin-top: rem(27);
+    margin-bottom: rem(25);
+    font-size: rem(36);
+    font-weight: 400;
+    line-height: calc(64 / 60);
+    max-width: rem(260);
+    
+    @include tablet {
+        color: initial;
+        font-size: rem(60);
+        text-align: left;
+        max-width: rem(430);
+    }
+}
+
     &__desc {
+        position: relative;
+        z-index: 1;
+        color: $white;
+        text-align: center;
         margin-bottom: rem(29);
+        text-transform: uppercase;
+        max-width: rem(200);
 
         @include tablet {
+            z-index: 1;
+            color: initial;
             font-size: rem(20);
+            text-align: left;
+            max-width: rem(290);
            
         }       
     }
 
     &__pic {
         margin-bottom: rem(29);
+
+        @include tablet {
+            z-index: 0;
+            position: absolute;
+            bottom: -50px;
+            left: 89px;
+        }
+
+        @include desktop {
+            z-index: 0;
+            position: absolute;
+            top: 0px;
+            left: 447px;
+        }
+
     }
 
     &__link {
+        z-index: 1;
+        position: relative;
+        width: 100%;
+        
+        @include tablet {
+            display: inline-block;
+            width: auto;
+            min-width: rem(244);
+            margin-bottom: rem(386);
+        }
+        @include desktop {
+            margin-bottom: rem(247);
+
+        }
     }
 }
+

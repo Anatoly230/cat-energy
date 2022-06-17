@@ -1,5 +1,9 @@
 .main-header {
   background-color: $white;
+
+  @include desktop {
+    background-color: transparent;
+  }
   // @include tablet {
   //   @include padding-resset;
   // }

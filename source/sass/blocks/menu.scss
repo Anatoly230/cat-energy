@@ -47,19 +47,27 @@ $font-color: $black;
     padding: rem(12) 0;
     margin-right: rem(36);
   }
-
-  &__item-link--current::after {
-    content: "";
-    display: inline-block;
-    width: 100%;
-    height: 2px;
-    background-color: $base-green;
-  }
-
-  }
-
-
+@include desktop {
+  color: $white;
 }
+}
+&__item-link--current {
+ 
+  @include tablet {
+    text-decoration: underline;
+    text-decoration-color: $base-green;
+    text-decoration-thickness:2px;
+    text-underline-offset: 14px;
+  }
+
+  @include desktop {
+    text-decoration-color: $white;
+  }
+} 
+
+  }
+
+
 
 
 // .menu__item:nth-of-type(2n) .menu__item-link {
@@ -139,9 +147,6 @@ $font-color: $black;
 //   }
 // }
 
-.menu__item:last-of-type {
-  position: relative;
-}
 
 // .menu__item:last-of-type::after {
 //   @media (max-width: $mobile-only) {

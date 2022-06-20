@@ -45,10 +45,12 @@
   padding: 0;
 }
 
-@mixin pseudo-el($form: block, $content:"",) {
+@mixin pseudo-el($form: block, $content:"") {
   display: $form;
   content: $content;
+  @content;
 }
+
 
 // for block debug start
 @mixin show-outline($color: red, $weight: 2px) {

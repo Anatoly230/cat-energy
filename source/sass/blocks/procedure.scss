@@ -1,16 +1,20 @@
 
 .procedure {
 @include section-wrapper;
-// @include show-outline;
-    &__heading {
+
+&__heading {
         font-size: rem(36);
         font-weight: 400;
+
+        @include tablet {
+            font-size: rem(60);
+        }
     }
 
     &__list {
         counter-reset: procedur-count;
         position: relative;
-        // @include show-outline(violet);
+
         @include reset-list-style;
         padding-top: rem(35);
         padding-bottom: rem(35);
@@ -18,24 +22,21 @@
         @include tablet {
             display: grid;
             grid-template-columns: repeat(2 , 1fr);
-            grid-template-rows: repeat(auto-fill , 1fr);
             grid-column-gap: rem(60);
         }
 
         @include desktop {
-            display: grid;
-            grid-template-columns: repeat(4 , 1fr);
-            grid-column-gap: rem(20);
+            grid-template-columns: repeat(4 , minmax(rem(245), 1fr));
+            grid-column-gap: rem(60);
         }
     }
 
     &__item {
-        // @include show-outline(green);
         position: relative;
         overflow: hidden;
         counter-increment: procedur-count;
-        padding-top: rem(10);
-        padding-bottom: rem(10);
+        padding-top: calc(10 / 320 * 100vw);
+        padding-bottom: calc(10 / 320 * 100vw);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -46,13 +47,8 @@
             padding-bottom: rem(94);
             flex-direction: column;
         }
-    }
 
-//     &__item:nth-of-type(odd) {
-//         @include tablet {
-// margin-right: rem(60);
-//         }
-//     }
+    }
     
     &__item::before {
 
@@ -67,7 +63,13 @@
         transform:translate(-55px,-140px);
         font-size: rem(280);
         line-height: 0.9;
-        // @include show-outline;
+
+        @include desktop {
+            left: auto;
+            top: 0;
+            right: 0;
+            transform:translate(0, 0);
+        }
     }
 }
     &__item::after {

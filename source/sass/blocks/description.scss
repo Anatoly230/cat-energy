@@ -1,36 +1,37 @@
 .description {
-@include section-wrapper;
-padding-top: rem(20);    
-
-@include tablet {
-    padding-top: rem(30);
-}
-
-@include desktop {
-    padding-top: rem(80);
-}
-    &__list {
-        @include reset-list-style;
-
-
-@include desktop {
-    display: flex;
-    flex-wrap: wrap;
-}
+    @include section-wrapper;
+    padding-top: rem(20);    
+    
+    @include tablet {
+        padding-top: rem(30);
     }
 
+    @include desktop {
+        padding-top: rem(80);
+    }
+    
+    &__list {
+        @include reset-list-style;
+        
+        @include desktop {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    
     &__item {
         margin-bottom: rem(20);
-
+        
         @include tablet {
             margin-bottom: rem(30);
         }
-
+        
         @include desktop {
             margin-right: rem(80);
             margin-bottom: rem(80);
             width: calc(570 / 1220 ) * 100%;
         }
+        
         &:nth-of-type(2n) {
             @include desktop {
             margin-right: 0;
@@ -38,118 +39,4 @@ padding-top: rem(20);
         }
     }
 }
-.descrition-card {
-    position: relative;
-    background-color: $pale-gray;
-    padding: rem(24) rem(22);
-    
-    @include tablet {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        grid-template-rows: auto 1fr auto;
-        grid-template-areas: 
-        'h i'
-        'c i'
-        'l i'
-        ;
-        padding: rem(77) rem(52) rem(52); 
-    }    
 
-    @include desktop {
-        display: block;
-        padding: rem(47) rem(52) rem(55);
-    }
-
-  &::after {
-    @include tablet-only {
-        grid-area: i;
-        display: block;
-        content: "";
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        background-color: $base-green;
-        margin-left: rem(30);
-    }
-  }  
-    
-    &__heading {
-        text-transform: uppercase;
-        display: flex;
-        align-items: center;
-        position: relative;
-        font-size: rem(24);
-        line-height: calc(37 / 24);
-        margin-bottom:rem(22);
-        max-width: rem(300);
-        
-        @include tablet {
-            grid-area: h;
-        }
-
-        &::before {
-            border-radius: 50%;
-            display: inline-block;
-            content: "";
-            position: relative;
-            width: 50px;
-            height: 50px;
-            background-color: $base-green;
-            margin-right: rem(19);
-
-            @include tablet {
-                display: none;
-            }
-            @include desktop {
-                display: inline-block;
-            }
-            
-        }
-    }
-
-    &__text {
-
-        max-width: rem(467);
-        margin-bottom: rem(23);
-
-        @include tablet {
-            border: none;
-            grid-area: c;
-        }
-
-
-    }
-
-    &__link {
-        display: flex;
-        align-items: center;
-        font-size: rem(20);
-        line-height: calc(30 / 20);
-        text-transform: uppercase;
-        text-decoration: none;
-        color: $black;
-        width: 100%;
-
-        padding-top: rem(15);
-        border-top: 1px solid $whity-gray;
-        
-        @include tablet {
-         grid-area: l;
-         border: none;
-        }
-
-        &::after {
-            display: flexbox;
-            content: "";
-            width: 24px;
-            height: 12px;
-            // background-color: $black;
-            // background-clip: url('../img/icons/sprite/arrow.svg');
-            background-image: url('../img/icons/sprite/arrow.svg');
-            background-size: 24px auto;
-            background-position: right center;
-            background-repeat: no-repeat;
-            margin-left: rem(15);
-        }
-    }
-}

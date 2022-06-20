@@ -1,0 +1,60 @@
+
+@mixin wrapper($content-width: $max-content-width) {
+  width: 100%;
+  max-width: $content-width;
+  margin: 0 auto;
+  // @include show-outline(2px, violet);
+}
+
+@mixin section-wrapper() {
+  width: 100%;
+  max-width: $max-content-width;
+  margin: 0 auto;
+  padding-left: rem(20);
+  padding-right: rem(20);
+  // @include show-outline(2px, green);
+
+  @include tablet {
+    padding-left: rem(29);
+    padding-right: rem(29);
+  }
+
+  @include desktop {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@mixin block-width($current-media, $mxWidth) {
+  width: calc($mxWidth / $current-media * 100%);
+}
+
+@mixin part-of-block($parts, $share:1) {
+  width: calc(100 / $parts * $share) * 1%;
+}
+@mixin padding-resset() {
+  padding: 0;
+}
+
+@mixin margin-resset() {
+  margin: 0;
+}
+
+@mixin reset-list-style() {
+  list-style: none;
+  padding: 0;
+}
+
+@mixin pseudo-el($form: block, $content:"") {
+  display: $form;
+  content: $content;
+  @content;
+}
+
+
+// for block debug start
+@mixin show-outline($color: red, $weight: 2px) {
+  outline: $weight dashed $color;
+  outline-offset: -$weight;
+}
+// for block debug end

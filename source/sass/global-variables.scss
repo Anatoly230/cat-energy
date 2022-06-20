@@ -1,17 +1,28 @@
 // devices
-$mobile-width: 320px;
-$mobile-only: 767px;
-$tablet-width: 768px;
+$mobile-min: 320px;
+$mobile-max: 767px;
+$tablet-min: 768px;
+$tablet-max: 1439px;
 $desktop-width: 1440px;
+$max-content-width: 1220px;
+
+// на удаление start
+$mobile-width: 320px;
+$tablet-width: 768px;
+// на удаление end
 
 // colors
 $white: #ffffff;
 $black: #000000;
 $base-green: #68b738;
 $green-darker: #5eaa2f;
+$green-promo-bg: #72b345;
 $base-gray: #cdcdcd;
+$base-gray-two: #dcdcdc;
 $pale-gray:#f2f2f2;
 $light-gray: #ebebeb;
+$light-gray-sec: #eaeaea;
+$whity-gray: #d9d9d9;
 $dark-gray: #666666;
 $off-black: #444444;
 $graphite-black: #222222;
@@ -20,6 +31,5 @@ $status-error: #ff8282;
 // font parametrs
 $initial-font-size: 16;
 $root-font-size: 14;
-$common-line-height: 1.5;
 $heading-line-height: 1.86;
 

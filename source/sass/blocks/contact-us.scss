@@ -9,6 +9,14 @@
     &__wrapper {
         @include section-wrapper;
     }
+
+    &__wrapper--pale {
+        background-color: $pale-gray; 
+
+        @include desktop {
+            background-color: $white;
+        }
+    }
     
     &__info {
         position: relative;
@@ -27,6 +35,14 @@
         @include desktop {
             width: fit-content;
             padding: rem(60) rem(80) rem(55);
+        }
+    }
+
+    &__info--pale {
+        background-color: $pale-gray; 
+
+        @include desktop {
+            background-color: $white;
         }
     }
     

@@ -4,7 +4,7 @@
 @import "functions.scss";
 @import "block-mixins.scss";
 @import "breakpoints.scss";
-@import "text-mixins.scss";
+
 @import "global.scss";
 @import "blocks/page.scss";
 @import "blocks/main-header.scss";
@@ -22,6 +22,9 @@
 @import "blocks/living-example.scss";
 @import "blocks/contact-us.scss";
 @import "blocks/example.scss";
+@import "blocks/card.scss";
+@import "blocks/other-products.scss";
+@import "blocks/present.scss";
 
 // @import "blocks/reception.scss";
 @import "blocks/togle-menu.scss";

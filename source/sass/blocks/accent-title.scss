@@ -1,16 +1,30 @@
-$title-color: black;
-$title-bg-color: white;
-$title-font-size: 30px;
+// работающая конструкция блока:
 
-$line-color: red;
+// <h2 class="accent-title">
+//     <span class="accent-title__text">Заголовок за которым предполагается линия</span>
+// </h2>
+
+$title-color: $black;
+$title-bg-color:$white;
+$title-font-size: rem(24);
+
+$line-color: $base-green;
 $line-weight: 2px;
 $indent-to-line: 20px;  
 
 
 .accent-title {
+
         color: $title-color;
         position: relative;
         font-size: $title-font-size;
+        font-weight: 400;
+        line-height: 1.28;
+
+        
+        @include tablet {
+            font-size: rem(36);
+        }
 
         &::before {
             z-index: 1;
@@ -22,13 +36,23 @@ $indent-to-line: 20px;
             left: 50%;
             transform: translateX(-50%);
             background-color: $line-color;
-        }
-        &-text {
+
+       }
+        &__text {
+            // @include show-outline;
+            display: inline-block;
             z-index: 2;
             position: relative;
             padding: 0 $indent-to-line; 
             margin-left: -$indent-to-line;
             background-color: $title-bg-color;
+
+            
+            @include tablet {
+             max-width: rem(380);
+            }
+
         }
         
     }
+    

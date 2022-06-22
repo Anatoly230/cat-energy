@@ -34,7 +34,7 @@
     &__item {
         position: relative;
         overflow: hidden;
-        counter-increment: procedur-count;
+        
         padding-top: calc(10 / 320 * 100vw);
         padding-bottom: calc(10 / 320 * 100vw);
         display: flex;
@@ -54,6 +54,7 @@
 
         @include tablet {
         @include pseudo-el;
+        counter-increment: procedur-count;
         content: counter(procedur-count);
         display: block;
         position: absolute;

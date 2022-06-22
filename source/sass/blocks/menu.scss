@@ -47,10 +47,17 @@ $font-color: $black;
     padding: rem(12) 0;
     margin-right: rem(36);
   }
-@include desktop {
-  color: $white;
+
 }
+
+
+&__item-link-index {
+  @include desktop {
+    color: $white;
+  }
 }
+
+
 &__item-link--current {
  
   @include tablet {
@@ -60,12 +67,17 @@ $font-color: $black;
     text-underline-offset: 14px;
   }
 
+
+} 
+
+&__item-link--current-index {
   @include desktop {
     text-decoration-color: $white;
   }
-} 
+}
 
   }
+
 
 
 

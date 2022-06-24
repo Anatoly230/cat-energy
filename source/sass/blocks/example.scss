@@ -1,45 +1,45 @@
 .example {
-    @include reset-list-style;
+  @include reset-list-style;
 
-    padding: rem(15); 
+  padding: rem(15);
+  position: relative;
+  border: 1px solid $base-gray;
+  border-radius: 3px;
+  min-width: rem(140);
+
+  &__title {
+    z-index: 1;
     position: relative;
-    border: 1px solid $base-gray;
-    border-radius: 3px;
-    min-width: rem(140);
+    text-align: center;
+    font-size: rem(24);
 
-    &__title {
-        z-index: 1;
-        position: relative;
-        text-align: center;
-        font-size: rem(24);
+    @include tablet {
+      font-size: rem(30);
+    }
+  }
 
-        @include tablet {
-            font-size: rem(30);
-        }
+  &__desc {
+    $translate-value: calc(87 / 2) * -1px;
+    position: absolute;
+    top: 4.5em;
+    left: 50%;
+    transform: translateX($translate-value);
+    font-size: rem(12);
+    line-height: 1;
+    text-align: center;
+    width: rem(87);
+    padding-left: rem(12);
+    padding-right: rem(12);
+    background-color: $light-gray-sec;
+
+    @include tablet {
+      font-size: rem(14);
+      max-width: rem(114);
+      background-color: $white;
     }
 
-    &__desc {
-        $translate-value: calc(87 / 2) * -1px;
-        position: absolute;
-        top: 4.5em;
-        left: 50%;
-        transform: translateX($translate-value);
-        font-size: rem(12);
-        line-height: 1;
-        text-align: center;
-        width: rem(87);
-        padding-left: rem(12);
-        padding-right: rem(12);
-        background-color: $light-gray-sec;
-
-        @include tablet {
-            font-size: rem(14);
-            max-width: rem(114);
-            background-color: $white;
-        }
-
-        @include desktop {
-            background-color: $light-gray-sec;
-        }
+    @include desktop {
+      background-color: $light-gray-sec;
     }
+  }
 }

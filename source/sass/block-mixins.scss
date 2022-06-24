@@ -32,6 +32,7 @@
 @mixin part-of-block($parts, $share:1) {
   width: calc(100 / $parts * $share) * 1%;
 }
+
 @mixin padding-resset() {
   padding: 0;
 }

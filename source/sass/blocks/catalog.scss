@@ -1,12 +1,12 @@
 .catalog {
-    &__title {
-        @include section-wrapper;
-        font-size: rem(36); 
-        margin-top: rem(25);
-        margin-bottom: rem(40);
-        
-        @include tablet {
-            font-size: rem(60);  
-        }
+  &__title {
+    @include section-wrapper;
+    font-size: rem(36);
+    margin-top: rem(25);
+    margin-bottom: rem(40);
+
+    @include tablet {
+      font-size: rem(60);
     }
+  }
 }

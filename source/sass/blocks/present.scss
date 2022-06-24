@@ -1,84 +1,83 @@
 
 .present {
-    padding-top: rem(65);
-    padding-bottom: rem(43);
+  padding-top: rem(65);
+  padding-bottom: rem(43);
+  padding-left: rem(15);
+  padding-right: rem(15);
+  font-size: rem(16);
+  line-height: calc(20 / 16);
+  background-image: url("../img/background/mobile-catalog-bg.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background/mobile-catalog-bg@2x.jpg");
+  }
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+  font-weight: 400;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    padding-top: rem(62);
+    padding-bottom: rem(42);
+    padding-left: rem(92);
+    padding-right: rem(92);
+
+    background-image: url("../img/background/tablet-catalog-bg.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/tablet-catalog-bg@2x.jpg");
+    }
+  }
+
+  @include desktop {
+    display: block;
+    padding-top: rem(62);
+    padding-bottom: rem(42);
     padding-left: rem(15);
     padding-right: rem(15);
-    font-size: rem(16);
-    line-height: calc(20 / 16);
-    background-image: url('../img/background/mobile-catalog-bg.jpg');
-   
-    @media (min-resolution: 2dppx) {
-        background-image: url('../img/background/mobile-catalog-bg@2x.jpg');
-    } 
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: $white;
-    font-weight: 400;
-    
-    @include tablet {
-        display: flex;
-        justify-content: space-between;
-        padding-top: rem(62);
-        padding-bottom: rem(42);
-        padding-left: rem(92);
-        padding-right: rem(92);
 
-        background-image: url('../img/background/tablet-catalog-bg.jpg');
-   
-        @media (min-resolution: 2dppx) {
-            background-image: url('../img/background/tablet-catalog-bg@2x.jpg');
-        }
+    background-image: url("../img/background/desktop-catalog-bg.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/desktop-catalog-bg@2x.jpg");
+    }
+  }
+
+  &__pic {
+    display: block;
+    fill: currentColor;
+    margin: 0 auto;
+    margin-bottom: rem(65);
+
+    @include tablet {
+      margin: 0;
     }
 
     @include desktop {
-        display: block;
-        padding-top: rem(62);
-        padding-bottom: rem(42);
-        padding-left: rem(15);
-        padding-right: rem(15);
-
-        background-image: url('../img/background/desktop-catalog-bg.jpg');
-   
-        @media (min-resolution: 2dppx) {
-            background-image: url('../img/background/desktop-catalog-bg@2x.jpg');
-        }
+      margin: 0 auto;
+      margin-bottom: rem(60);
     }
-    
-    &__pic {
-        display: block;
-        fill: currentColor;
-        margin: 0 auto;
-        margin-bottom: rem(65);
+  }
 
-        @include tablet {
-            margin: 0;
-        }
 
-        @include desktop {
-            margin: 0 auto;  
-            margin-bottom: rem(60);
-        }
+
+  &__desc {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    max-width: rem(165);
+    margin: 0 auto;
+
+    @include tablet {
+      text-align: left;
+      margin: 0;
     }
 
-
-    
-    &__desc {
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: center;
-        max-width: rem(165);
-        margin: 0 auto;
-        
-        @include tablet {
-            text-align: left;
-            margin: 0;
-        }
-
-        @include desktop {
-            margin: 0 auto;  
-            text-align: center;
-        }
-            
+    @include desktop {
+      margin: 0 auto;
+      text-align: center;
     }
+  }
 }

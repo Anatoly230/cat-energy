@@ -1,42 +1,42 @@
 .description {
-    @include section-wrapper;
-    padding-top: rem(20);    
-    
+  @include section-wrapper;
+  padding-top: rem(20);
+
+  @include tablet {
+    padding-top: rem(30);
+  }
+
+  @include desktop {
+    padding-top: rem(80);
+  }
+
+  &__list {
+    @include reset-list-style;
+
+    @include desktop {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    margin-bottom: rem(20);
+
     @include tablet {
-        padding-top: rem(30);
+      margin-bottom: rem(30);
     }
 
     @include desktop {
-        padding-top: rem(80);
+      margin-right: rem(80);
+      margin-bottom: rem(80);
+      width: calc(570 / 1220) * 100%;
     }
-    
-    &__list {
-        @include reset-list-style;
-        
-        @include desktop {
-            display: flex;
-            flex-wrap: wrap;
-        }
+
+    &:nth-of-type(2n) {
+      @include desktop {
+        margin-right: 0;
+      }
     }
-    
-    &__item {
-        margin-bottom: rem(20);
-        
-        @include tablet {
-            margin-bottom: rem(30);
-        }
-        
-        @include desktop {
-            margin-right: rem(80);
-            margin-bottom: rem(80);
-            width: calc(570 / 1220 ) * 100%;
-        }
-        
-        &:nth-of-type(2n) {
-            @include desktop {
-            margin-right: 0;
-            }
-        }
-    }
+  }
 }
 

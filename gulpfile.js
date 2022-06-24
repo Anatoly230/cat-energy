@@ -14,6 +14,15 @@ import svgstore from 'gulp-svgstore';
 import del from 'del';
 import imagemin from 'gulp-imagemin';
 import webp from 'gulp-webp';
+import tg from 'gulp-typograf';
+
+// typograf
+
+export const typograf = () => {
+  return gulp.src('source/index.html')
+  .pipe(tg({ locale: ['ru', 'en-US'] }))
+  .pipe(gulp.dest('build/'));
+}
 
 // Styles
 

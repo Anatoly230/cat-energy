@@ -1,54 +1,52 @@
 
 .miracles {
-    width: min-content;
-    margin: 0  auto;
-    @include tablet { 
-        display: flex;
-        width: rem(calc(296 * 2));
-        height: rem(511);
-        
-        &__pic-wrapper {
-        overflow: hidden;
-        width: 50%;
+  width: min-content;
+  margin: 0  auto;
+
+  @include tablet {
+    display: flex;
+    width: rem(calc(296 * 2));
+    height: rem(511);
+
+    &__pic-wrapper {
+      overflow: hidden;
+      width: 50%;
     }
-}
+  }
 
-    &__pic-wrapper--became {
-        @include mobile-only {
-            display: none;    
-            }
+  &__pic-wrapper--became {
+    @include mobile-only {
+      display: none;
     }
+  }
 
-    &__pic-wrapper--it-was &__pic {
-        
-        height: auto;
+  &__pic-wrapper--it-was &__pic {
 
-        @include tablet {   
+    height: auto;
 
-            width: rem(677);
+    @include tablet {
 
-            transform: translate(-5%);
-        }
+      width: rem(677);
 
+      transform: translate(-5%);
     }
+  }
 
-    &__pic-wrapper--it-was {
-        @include mobile-only {
-            width: 100%;
-        }
+  &__pic-wrapper--it-was {
+    @include mobile-only {
+      width: 100%;
     }
-    
-    
-    &__pic-wrapper--became &__pic {
-            width: rem(545);
-            transform: translate(-48%);
-    }
-
-    &__pic {
-        max-width: initial;
-        height: 100%;
-        max-width: none;
-    }
+  }
 
 
+  &__pic-wrapper--became &__pic {
+    width: rem(545);
+    transform: translate(-48%);
+  }
+
+  &__pic {
+    max-width: initial;
+    height: 100%;
+    max-width: none;
+  }
 }

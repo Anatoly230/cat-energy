@@ -1,149 +1,144 @@
 
 .living-example {
-    position: relative;
-    background-color: $light-gray-sec;
+  position: relative;
+  background-color: $light-gray-sec;
 
-    padding-top: rem(25);
-    padding-bottom: rem(40);
-    
+  padding-top: rem(25);
+  padding-bottom: rem(40);
+
+  @include tablet {
+    background-color: $white;
+    padding-top: rem(40);
+    padding-bottom: rem(55);
+  }
+
+  @include desktop {
+    padding-bottom: rem(70);
+  }
+
+  &::before {
     @include tablet {
-        background-color: $white;
-        padding-top: rem(40);
-        padding-bottom: rem(55);
+      @include pseudo-el {
+        z-index: 0;
+        position: absolute;
+        width: 100%;
+        height: rem(462);
+        background-color: $light-gray-sec;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+
+  &__wrapper {
+    @include section-wrapper;
+    position: relative;
+    z-index: 1;
+
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__info-wrapper {
+    @include desktop {
+      width: 40%;
+    }
+  }
+
+  &__heading {
+    font-size: rem(36);
+    font-weight: 400;
+    margin-bottom: rem(40);
+
+    @include tablet {
+      font-size: rem(60);
+      margin-bottom: rem(60);
     }
 
     @include desktop {
-        padding-bottom: rem(70);
+      margin-bottom: rem(130);
     }
+  }
 
-    &::before {
-        @include tablet {
-            @include pseudo-el {
-                z-index: 0;
-                position: absolute;
-                width: 100%;
-                height: rem(462);
-                background-color: $light-gray-sec;
-                bottom: 0;
-                left: 0;
-            }
-        }
+  &__text {
+    margin-bottom: rem(20);
+
+    @include tablet {
+      margin-bottom: rem(50);
     }
+  }
 
-    &__wrapper {
-        @include section-wrapper;
-        position: relative;
-        z-index: 1;
-        @include desktop {
-            display: flex;
-            justify-content: space-between;
-        }
+  &__detailes-wraper {
+    margin-bottom: rem(40);
+
+    @include tablet {
+      padding-bottom: rem(85);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    
-    &__info-wrapper {
- @include desktop {
-    width: 40%;
- }
+  }
+
+  &__results {
+    display: flex;
+    margin-bottom: rem(34);
+  }
+
+  &__results-wrapper {
+    flex-shrink: 1;
+    width: 50%;
+    margin-right: rem(32);
+  }
+
+  &__results-wrapper:nth-of-type(2n) {
+    margin-right: rem(0);
+  }
+
+  &__price {
+    text-align: center;
+    font-weight: bold;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
     }
-    
-    &__heading {
-        font-size: rem(36);
-        font-weight: 400;
-        margin-bottom: rem(40);
+  }
 
-        @include tablet {
-            font-size: rem(60);
-            margin-bottom: rem(60);
-        }
+  &__difference {
+    padding-left: rem(20);
+    padding-right: rem(20);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-        @include desktop {
-            margin-bottom: rem(130);
-        }
-    }
-
-    &__text {
-        margin-bottom: rem(20);
-
-        @include tablet {
-            margin-bottom: rem(50);
-        }
-       
-    }
-    
-    &__detailes-wraper {
-        margin-bottom: rem(40);
-       
-        @include tablet {
-            padding-bottom: rem(85);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-    }
-    &__results {
-        display: flex;
-        margin-bottom: rem(34);
-
-        @include tablet {
-
-        }
-    }
-        
-    &__results-wrapper {
-        flex-shrink: 1;
+    @include desktop {
       width: 50%;
-      margin-right: rem(32);
-     }
-
-    &__results-wrapper:nth-of-type(2n) {
-      margin-right: rem(0);
-     }
-
-     &__price {
-         text-align: center;
-         font-weight: bold;
-
-        @include tablet {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-        }
     }
+  }
 
-    &__difference {
-        padding-left: rem(20);
-        padding-right: rem(20);
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        // @include show-outline(orange);
-        
-        @include desktop {
-            width: 50%;
-        }
+  &__pics-container {
+    position: relative;
+    margin-bottom: rem(20);
+
+    @include tablet {
+      margin-bottom: rem(25);
     }
-    &__pics-container {
-        position: relative;
-        margin-bottom: rem(20);
-        
-        @include tablet {
-            margin-bottom: rem(25);
+  }
 
-        }
+  &__review {
+    max-width: rem(400);
 
+    @include tablet {
+      max-width: rem(700);
     }
+  }
+  // &__price-name {
+  // }
 
-    &__review {
-        max-width: rem(400);
-        
-        @include tablet {
-            max-width: rem(700);
-        }
-    }
-    // &__price-name {
-    // }
-
-    // &__price-value {
-    // }
+  // &__price-value {
+  // }
 }

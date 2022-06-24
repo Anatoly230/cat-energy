@@ -1,182 +1,175 @@
-.descrition-card  {
-    $bg-color: $pale-gray;
-    position: relative;
-    background-color: $bg-color;
-    padding: rem(24) rem(22);
-    
-    @include tablet-only {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        grid-template-rows: auto 1fr auto;
-        grid-column-gap: rem(40);
-        grid-template-areas: 
-        'h i'
-        'c i'
-        'l i'
-        ;
-        padding: rem(77) rem(52) rem(52); 
-    }    
+.descrition-card {
+  $bg-color: $pale-gray;
+  position: relative;
+  background-color: $bg-color;
+  padding: rem(24) rem(22);
 
-    @include desktop {
+  @include tablet-only {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr auto;
+    grid-column-gap: rem(40);
+    grid-template-areas:
+      "h i"
+      "c i"
+      "l i";
+    padding: rem(77) rem(52) rem(52);
+  }
 
-        padding: rem(47) rem(52) rem(55);
-    }
+  @include desktop {
+
+    padding: rem(47) rem(52) rem(55);
+  }
 
   &::before {
     @include tablet-only {
-        justify-self: center;
-        grid-area: i;
-        @include pseudo-el {
-            width: 200px;
-            height: 200px;
-            background-color: $base-green;
-        }
-        border-radius: 50%;
+      justify-self: center;
+      grid-area: i;
 
+      @include pseudo-el {
+        width: 200px;
+        height: 200px;
+        background-color: $base-green;
+      }
+      border-radius: 50%;
     }
-  }  
+  }
+
   &::after {
-      @include tablet-only {
-        justify-self: center;
-        grid-area: i;
-        
-        @include pseudo-el {
-            width: rem(268);
-            height: rem(194);
-        }
+    @include tablet-only {
+      justify-self: center;
+      grid-area: i;
 
-        background-image: url('../img/icons/sprite/cat-up.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-
-
-    }
-}  
-
-&--weight-gain::after {
-  background-image: url('../img/icons/sprite/cat-down.svg');
-}
-
-
-    
-    &__heading {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        align-items: center;
-        grid-template-rows: 1fr;
-        grid-template-areas: 'icon header';
-        grid-column-gap: rem(20);
-        text-transform: uppercase;
-        font-size: rem(24);
-        line-height: calc(37 / 24);
-        margin-bottom:rem(22);
-        max-width: rem(360);
-        
-        @include tablet {
-            grid-area: h;
-            font-size: rem(36);
-        }
-
-        &::before {
-            justify-self: center;
-            grid-area: icon;
-            background-color: $base-green;
-            
-            @include pseudo-el{
-                width: 50px;
-                height: 50px;
-            }
-            
-            border-radius: 50%;
-
-            @include tablet {
-                display: none;
-            }
-            
-            @include desktop {
-                display: block;
-                width: 100px;
-                height: 100px;                
-            }
-        }
-
-        &::after {
-            justify-self: center;
-            grid-area: icon;
-           
-            @include pseudo-el{
-                width: rem(67);
-                height: rem(55);
-            }
-           
-            background-image: url('../img/icons/sprite/cat-up.svg');
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
-
-
-
-            @include tablet {
-                display: none;
-            }
-
-            @include desktop {
-                display: block;
-                width: rem(134);
-                height: rem(105);
-
-            }
-            
-        }
-    }
-    
-    &--weight-gain &__heading::after {
-        background-image: url('../img/icons/sprite/cat-down.svg');
+      @include pseudo-el {
+        width: rem(268);
+        height: rem(194);
       }
 
+      background-image: url("../img/icons/sprite/cat-up.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
 
-    &__text {
-
-        max-width: rem(467);
-        margin-bottom: rem(23);
-
-        @include tablet {
-            border: none;
-            grid-area: c;
-        }
+  &--weight-gain::after {
+    background-image: url("../img/icons/sprite/cat-down.svg");
+  }
 
 
+
+  &__heading {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    grid-template-rows: 1fr;
+    grid-template-areas: "icon header";
+    grid-column-gap: rem(20);
+    text-transform: uppercase;
+    font-size: rem(24);
+    line-height: calc(37 / 24);
+    margin-bottom: rem(22);
+    max-width: rem(360);
+
+    @include tablet {
+      grid-area: h;
+      font-size: rem(36);
     }
 
-    &__link {
-        display: flex;
-        align-items: center;
-        font-size: rem(16);
-        line-height: calc(30 / 20);
-        text-transform: uppercase;
-        text-decoration: none;
-        color: $black;
-        width: 100%;
-        padding-top: rem(15);
-        border-top: 1px solid $whity-gray;
-        
-        @include tablet {
-            grid-area: l;
-            border: none;
-            font-size: rem(20);
-        }
+    &::before {
+      justify-self: center;
+      grid-area: icon;
+      background-color: $base-green;
 
-        &::after {
-            display: flexbox;
-            content: "";
-            width: 24px;
-            height: 12px;
-            background-image: url('../img/icons/sprite/arrow.svg');
-            background-size: 24px auto;
-            background-position: right center;
-            background-repeat: no-repeat;
-            margin-left: rem(15);
-        }
+      @include pseudo-el {
+        width: 50px;
+        height: 50px;
+      }
+
+      border-radius: 50%;
+
+      @include tablet {
+        display: none;
+      }
+
+      @include desktop {
+        display: block;
+        width: 100px;
+        height: 100px;
+      }
     }
+
+    &::after {
+      justify-self: center;
+      grid-area: icon;
+
+      @include pseudo-el {
+        width: rem(67);
+        height: rem(55);
+      }
+
+      background-image: url("../img/icons/sprite/cat-up.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+
+
+      @include tablet {
+        display: none;
+      }
+
+      @include desktop {
+        display: block;
+        width: rem(134);
+        height: rem(105);
+      }
+    }
+  }
+
+  &--weight-gain &__heading::after {
+    background-image: url("../img/icons/sprite/cat-down.svg");
+  }
+
+
+  &__text {
+
+    max-width: rem(467);
+    margin-bottom: rem(23);
+
+    @include tablet {
+      border: none;
+      grid-area: c;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-size: rem(16);
+    line-height: calc(30 / 20);
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $black;
+    width: 100%;
+    padding-top: rem(15);
+    border-top: 1px solid $whity-gray;
+
+    @include tablet {
+      grid-area: l;
+      border: none;
+      font-size: rem(20);
+    }
+
+    &::after {
+      display: flexbox;
+      content: "";
+      width: 24px;
+      height: 12px;
+      background-image: url("../img/icons/sprite/arrow.svg");
+      background-size: 24px auto;
+      background-position: right center;
+      background-repeat: no-repeat;
+      margin-left: rem(15);
+    }
+  }
 }

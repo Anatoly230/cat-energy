@@ -1,6 +1,9 @@
 // media queries start
 
 
+$mobile-min: 0px;
+$mobile-max: 767px;
+
 @mixin mobile {
   @media (max-width: $mobile-max) {
     @content;
@@ -8,7 +11,7 @@
 }
 
 @mixin mobile-only {
-  @media (max-width: $mobile-min) and (max-width: $mobile-max) {
+  @media (min-width: $mobile-min) and (max-width: $mobile-max) {
     @content;
   }
 }

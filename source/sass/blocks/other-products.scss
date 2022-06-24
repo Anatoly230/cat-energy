@@ -1,0 +1,63 @@
+
+.other-products {
+    @include section-wrapper; 
+    
+    padding-bottom: rem(35);
+    
+    @include tablet {
+        padding-bottom: rem(76);
+
+    }
+
+    @include desktop {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: min-content, 1fr;
+        grid-column-gap: rem(80);
+        grid-template-areas: 
+        't t t t t t t t'
+        'p p p p p p o o';
+        
+    }
+    &__title {
+            margin-top: rem(25);
+            margin-bottom: rem(36);
+    
+            @include tablet {
+                margin-top: rem(65);
+                margin-bottom: rem(80);
+            }
+    
+            @include desktop {
+                margin-top: rem(75);
+                grid-area: t;
+            }
+        }
+        
+    
+        &__list {
+            @include reset-list-style;
+            margin-bottom: rem(35);
+            
+            @include tablet {
+                margin-bottom: rem(70);
+                
+            }
+
+            @include desktop {
+                margin-bottom: 0;
+                grid-area: p;
+            }
+        }
+
+        &__item {
+        }
+
+        &__present {
+
+            @include desktop {
+                grid-area: o;
+            }
+        }
+    }
+

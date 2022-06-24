@@ -1,0 +1,230 @@
+.card {
+    position: relative;
+    padding-top: rem(20);
+    padding-bottom : rem(35);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+
+    @include tablet {
+        border: none;
+        display: block;
+        background-color: $pale-gray;
+        margin-top: rem(140);
+        padding: rem(242) rem(36) rem(39);
+    }
+
+
+&:first-of-type::before {
+    @include pseudo-el {
+        position: absolute;
+        width: 100vw;
+        height: 1px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $light-gray;
+    }
+
+    @include tablet {
+        display: none;
+    }
+}
+
+&::after {
+    @include pseudo-el {
+        position: absolute;
+        width: 100vw;
+        height: 1px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $light-gray;
+    }
+
+    @include tablet {
+        display: none;
+    }
+}
+    
+    &__pic-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: rem(28);
+
+        flex-shrink: 0;
+        flex-grow: 0;
+        flex-basis: rem(84);
+        height: rem(100);
+
+        @include tablet {
+            width: rem(168);
+            height: rem(206);
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            left: 50%;
+            top: rem(-206);
+            transform: translate(-50%,50%);
+        }
+    }
+    
+    &__pic {
+        width: 100%;
+    }
+    
+    
+    &__info-wrapper {
+        flex-grow: 1;
+        max-width: rem(320);
+        min-width: rem(110);
+        margin-left: rem(28);
+
+
+        @include tablet {
+            margin: 0;
+            max-width: 100%;
+        }
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        font-size: rem(16);
+        line-height: calc(20 / 16);
+        font-weight: bold;
+        max-width: rem(76);
+        margin-bottom: rem(18);
+
+        @include tablet {
+            margin: 0 auto;
+            max-width: rem(130);
+            font-size: rem(20);
+            line-height: calc(24 / 20); 
+            text-align: center;
+            margin-bottom: rem(20);
+        }
+
+    }
+
+    &__parametrs-list {
+
+    }
+
+    &__parametrs-wrapper {
+        display: flex;
+        justify-content: space-between;
+        font-size: rem(12);
+        margin-bottom: rem(5);
+
+        @include tablet {
+            font-size: rem(16);
+            padding-bottom: rem(10);
+            border-bottom: 1px solid $base-gray;
+        }
+    }
+
+    &__parametrs-wrapper:last-of-type {
+        margin-bottom: rem(0);
+    }
+
+
+    &__parametrs-name {
+        margin-right: 1em;
+    }
+
+    &__parametrs-value {
+    }
+
+    &__buy-link {
+        font-size: rem(16);
+        margin-top: rem(22);
+        width: 100%;
+        flex-shrink: 0;
+
+        @include tablet {
+            margin-top: rem(35);  
+        }
+    }
+}
+
+
+.card-empty {
+    padding-top: rem(25) ;
+    padding-bottom: rem(25) ;
+   
+    @include tablet {
+        margin-top: rem(140);
+        border: 1px solid $pale-gray;
+        padding: rem(52) rem(38) rem(38);
+    }
+
+    &__link {
+        text-decoration: none;
+        color: initial;
+
+        @include tablet {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__add-pic {
+        display: block;
+        margin-bottom: rem(25);
+        margin-left: auto;
+        margin-right: auto;
+
+        @include tablet {
+            width: rem(60);
+            height: rem(60);
+            margin: 0;
+            margin-bottom: rem(50);  
+        }
+    }
+
+    &__heading {
+        margin-left: auto;
+        margin-right: auto;
+        text-transform: uppercase;
+        font-size: rem(16);
+        line-height: calc(20/16);
+        text-align: center;
+        margin-bottom: rem(8);
+
+        @include tablet {
+            max-width: rem(167);
+            margin: 0;
+            margin-bottom: rem(23);
+            font-size: rem(20);
+            line-height: calc(22/20);  
+        }
+    }
+
+    &__desc {
+        text-align: center;
+        font-size: rem(12);
+        line-height: calc(16/12);
+        margin-bottom: rem(21);
+
+        @include tablet {
+            max-width: rem(167);
+            font-size: rem(16);
+            line-height: calc(18/16);
+            margin: 0;
+            margin-bottom: rem(87);  
+        }
+    }
+
+    &__buy-link {
+        width: 100%;
+        background-color: $pale-gray;
+        color: initial;
+    }
+}
+

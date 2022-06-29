@@ -29,6 +29,7 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "lint": "npm run editorconfig && npm run stylelint",
+    "lintfix": "stylelint \"source/sass/**/*.scss\" --fix --syntax scss --ignore-path .gitignore",
     "build": "gulp build",
     "start": "gulp"
   },

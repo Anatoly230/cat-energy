@@ -35,7 +35,7 @@
         </a>
         <button class="main-nav__togle-menu togle-menu"><span class=" visually-hidden">Закрыть</span></button>
       </div>
-      <menu class="main-nav__menu menu">
+      <menu class="main-nav__menu menu menu--hide">
         <li class="menu__item">
           <a class="menu__item-link" href="index.html">Главная</a>
         </li>
@@ -50,109 +50,118 @@
   </header>
 
   <main class="page__content order">
-    <h1 class="order__title">Подбор программы</h1>
+    <h1  class="visually-hidden">Форма для заказа</h1>
     <section class="order__data data">
-      <h2 class="visually-hidden">Форма для заказа</h2>
-      <p class="data__info">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-      <form class="data__form form" action="https://echo.htmlacademy.ru" method="post">
 
+    <h2 class="data__title">Подбор программы</h2>
+    <p class="data__info">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+    <form class="data__form form" action="https://echo.htmlacademy.ru" method="post">
 
-        <fieldset class="form__introduce fields">
-          <legend class="visually-hidden">Осноные данные</legend>
-          <div class="fields__item reception">
-            <input class="reception__field" type="text" id="name" name="custom-name" placeholder="Барсик" required>
-            <label class="reception__label" for="name">Имя*</label>
-          </div>
-          <div class="fields__item reception">
-            <input class="reception__field" type="number" id="surename" name="custom-surname" placeholder="7" required>
-            <label class="reception__label" for="surename">Вес*</label>
-          </div>
-          <div class="fields__item reception">
-            <input class="reception__field" type="text" id="patronymic" name="patronymic" placeholder="Викторович">
-            <label class="reception__label" for="patronymic">Возраст(лет)</label>
-          </div>
-        </fieldset>
+<div class="form__fields-wrapper">
+      <div class="form__introduce fields fields--introduce">
+        <h3 class="visually-hidden">Осноные данные</h3>
+        <div class="fields__item reception">
+          <input class="reception__field" type="text" id="name" name="custom-name" placeholder="Барсик" required>
+          <label class="reception__label" for="name">Имя:*</label>
+        </div>
+        <div class="fields__item reception">
+          <input class="reception__field" type="number" id="surename" name="custom-surname" placeholder="7" required>
+          <label class="reception__label" for="surename">Вес (кг):*</label>
+        </div>
+        <div class="fields__item reception">
+          <input class="reception__field" type="text" id="patronymic" name="patronymic" placeholder="Викторович">
+          <label class="reception__label" for="patronymic">Возраст (лет):</label>
+        </div>
+      </div>
 
-        <fieldset class="form__impressions fields">
-          <legend class="visually-hidden">Набор массы или похудение</legend>
+      <div class="form__impressions fields">
+        <h3 class="visually-hidden">Набор массы или похудение</h3>
 
-          <div class="fields__item  reception">
-            <input class="reception__choose" type="radio" name="wishes" id="weight-loss" value="loss" checked>
-            <label class="reception__label reception__label--choose" for="weight-loss"><span
-                class="reception__thing reception__thing--radio"></span>Похудение</label>
-          </div>
+        <div class="fields__item fields__item--check  reception">
+          <input class="reception__choose" type="radio" name="wishes" id="weight-loss" value="loss" checked>
+          <label class="reception__label reception__label--choose" for="weight-loss"><span
+              class="reception__thing reception__thing--radio"></span>Похудение</label>
+        </div>
 
-          <div class="fields__item  reception">
-            <input class="reception__choose" type="radio" name="wishes" id="kit" value="kit">
-            <label class="reception__label reception__label--choose" for="kit"><span
-                class="reception__thing reception__thing--radio"></span>Набор массы</label>
-          </div>
+        <div class="fields__item fields__item--check reception">
+          <input class="reception__choose" type="radio" name="wishes" id="kit" value="kit">
+          <label class="reception__label reception__label--choose" for="kit"><span
+              class="reception__thing reception__thing--radio"></span>Набор массы</label>
+        </div>
 
-          <div class="fields__item  reception">
-            <input class="reception__choose" type="radio" name="wishes" id="unclear" value="unclear">
-            <label class="reception__label reception__label--choose" for="unclear"><span
-                class="reception__thing reception__thing--radio"></span>Не знаю (нужен ваш совет)</label>
-          </div>
-        </fieldset>
-
-        <fieldset class="form__contact fields">
-          <legend class="fields__name winged-title">Контактные данные (владельца кота)</legend>
-
-          <div class="fields__item reception">
+        <div class="fields__item  fields__item--check reception">
+          <input class="reception__choose" type="radio" name="wishes" id="unclear" value="unclear">
+          <label class="reception__label reception__label--choose" for="unclear"><span
+              class="reception__thing reception__thing--radio"></span>Не знаю (нужен ваш совет)</label>
+        </div>
+      </div>
+</div>
+      <div class="form__contact fields">
+        <h3 class="fields__name  accent-title"><span class="fields__name-text accent-title__text">Контактные данные (владельца кота)</span></h3>
+        <div class="fields__wrapper-a">
+          <div class="fields__item reception reception--icon">
             <input class="reception__field" type="email" name="mail" id="mail" placeholder="kuklachev@gmail.com"
               required>
             <label class="reception__label" for="mail">E-mail:*</label>
+            <svg class="reception__icon" width="20" height="20">
+              <use xlink:href="img/icons/sprite/sprite.svg#mail"></use>
+            </svg>
           </div>
 
           <div class="fields__item reception">
             <input class="reception__field" type="email" name="mail" id="phone" placeholder="8 (960) 900-60-90"
               required>
             <label class="reception__label" for="phone">Телефон:*</label>
+                          <svg class="reception__icon" width="20" height="20">
+              <use xlink:href="img/icons/sprite/sprite.svg#phone"></use>
+            </svg>
+          </div>
+      </div>
+        <p class="fields__name fields__name--comment accent-title"><span class="fields__name-text accent-title__text">Комментарий</p>
+        <textarea class="fields__textarea"  name="custom-comments" id="custom-comments" cols="30" rows="10"
+          placeholder="Расскажите обо всех повадках кота"></textarea>
+      </div>
+
+
+      <div class="form__additionally fields">
+        <h3 class="fields__name fields__name--additionally accent-title ">
+          <span class="fields__name-text accent-title__text">Дополнительно</span>
+        </h3>
+        <div class="fields__wrapper-b">
+        <div class="fields__item fields__item--check reception">
+          <input class="reception__choose" type="checkbox" name="additionally" id="sweetener" value="sweetener"
+            checked>
+          <label class="reception__label reception__label--choose" for="sweetener"><span
+              class="reception__thing reception__thing--checkbox"></span>Сахарозаменитель</label>
+        </div>
+
+        <div class="fields__item fields__item--check reception">
+          <input class="reception__choose" type="checkbox" name="additionally" id="water" value="water">
+          <label class="reception__label reception__label--choose" for="water"><span
+              class="reception__thing reception__thing--checkbox"></span>Питьевая вода</label>
+        </div>
+
+        <div class="fields__item fields__item--check reception">
+          <input class="reception__choose" type="checkbox" name="additionally" id="milk" value="milk">
+          <label class="reception__label reception__label--choose" for="milk"><span
+              class="reception__thing reception__thing--checkbox"></span>Молоко</label>
+        </div>
+
+        <div class="fields__item fields__item--check reception">
+          <input class="reception__choose" type="checkbox" name="additionally" id="vitamins" value="vitamins">
+          <label class="reception__label reception__label--choose" for="vitamins"><span
+              class="reception__thing reception__thing--checkbox"></span>Витамины</label>
+            </div>
           </div>
 
-          <p class="fields__name winged-title">Комментарий</p>
-          <textarea name="custom-comments" id="custom-comments" cols="30" rows="10"
-            placeholder="Расскажите обо всех повадках кота"></textarea>
-        </fieldset>
+        <div class="fields__send-btn-wrapper">
+          <button class="fields__send-btn btn">Отправить заявку</button>
+          <span class="fields__obligatory-info">* — Обязательные поля</span>
+        </div>
+      </div>
 
-
-        <fieldset class="form__additionally fields">
-          <legend class="fields__name ">Дополнительно</legend>
-
-
-          <div class="fields__item  reception">
-            <input class="reception__choose" type="checkbox" name="additionally" id="sweetener" value="sweetener"
-              checked>
-            <label class="reception__label reception__label--choose" for="sweetener"><span
-                class="reception__thing reception__thing--checkbox"></span>Сахарозаменитель</label>
-          </div>
-
-          <div class="fields__item  reception">
-            <input class="reception__choose" type="checkbox" name="additionally" id="water" value="water">
-            <label class="reception__label reception__label--choose" for="water"><span
-                class="reception__thing reception__thing--checkbox"></span>Питьевая вода</label>
-          </div>
-
-          <div class="fields__item  reception">
-            <input class="reception__choose" type="checkbox" name="additionally" id="milk" value="milk">
-            <label class="reception__label reception__label--choose" for="milk"><span
-                class="reception__thing reception__thing--checkbox"></span>Молоко</label>
-          </div>
-
-          <div class="fields__item  reception">
-            <input class="reception__choose" type="checkbox" name="additionally" id="vitamins" value="vitamins">
-            <label class="reception__label reception__label--choose" for="vitamins"><span
-                class="reception__thing reception__thing--checkbox"></span>Витамины</label>
-          </div>
-          <div class="fields__send-btn-wrapper">
-            <button class="fields__send-btn btn">Отправить заявку</button>
-            <span class="fields__obligatory-info">* — Обязательные поля</span>
-          </div>
-        </fieldset>
-
-      </form>
-
-    </section>
+    </form>
+</section>
     <section class="catalog__contact-us contact-us contact-us--pale">
       <h2 class="visually-hidden">Как нас найти</h2>
       <div class="contact-us__wrapper">

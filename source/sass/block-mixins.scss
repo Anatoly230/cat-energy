@@ -6,17 +6,51 @@
   // @include show-outline(2px, violet);
 }
 
+
+// @mixin section-wrapper() {
+//   width: 100%;
+//   max-width: $max-content-width;
+//   margin: 0 auto;
+//   padding-left: rem(20);
+//   padding-right: rem(20);
+//   // @include show-outline(2px, green);
+
+//   @include tablet {
+//     padding-left: rem(29);
+//     padding-right: rem(29);
+//   }
+
+//   @include desktop {
+//     padding-left: 0;
+//     padding-right: 0;
+//   }
+// }
+
+// @mixin section-wrapper() {
+//   max-width: $max-content-width;
+//   margin: 0 auto;
+//   width: calc((100 - (20 / 320 * 100)) * 1%);
+//   @include tablet {
+//     width: calc((100 - (30 / 768 * 100)) * 1%);
+//   }
+// }
+
+
 @mixin section-wrapper() {
   width: 100%;
   max-width: $max-content-width;
   margin: 0 auto;
   padding-left: rem(20);
   padding-right: rem(20);
-  // @include show-outline(2px, green);
+
+  @media (min-width: 321px) {
+    padding-left: calc(20 / 320 * 100%);
+    padding-right: calc(20 / 320 * 100%);
+  }
 
   @include tablet {
-    padding-left: rem(29);
-    padding-right: rem(29);
+    padding-left: calc(30 / 768 * 100%);
+    padding-right: calc(30 / 768 * 100%);
   }
 
   @include desktop {
@@ -24,6 +58,30 @@
     padding-right: 0;
   }
 }
+
+@mixin section-wrapper-b() {
+  width: 100%;
+  max-width: $max-content-width;
+  margin: 0 auto;
+  padding-left: rem(20);
+  padding-right: rem(20);
+
+  @media (min-width: 321px) {
+    padding-left: calc(20 / 320 * 100%);
+    padding-right: calc(20 / 320 * 100%);
+  }
+
+  @include tablet {
+    padding-left: calc(70 / 768 * 100%);
+    padding-right: calc(70 / 768 * 100%);
+  }
+
+  @include desktop {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 
 @mixin block-width($current-media, $mxWidth) {
   width: calc($mxWidth / $current-media * 100%);

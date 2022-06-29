@@ -6,9 +6,10 @@
     padding-bottom: rem(107);
   }
 
-&--pale {
-  background-color: $pale-gray;
-}
+  &--pale {
+    background-color: $pale-gray;
+  }
+
   &__wrapper {
     @include section-wrapper;
   }

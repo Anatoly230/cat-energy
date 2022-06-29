@@ -89,6 +89,15 @@ $font-color: $black;
       text-decoration-color: $white;
     }
   }
+
+  &__item-link:hover {
+    opacity: 0.6;
+  }
+
+
+  &__item-link:active {
+    opacity: 0.3;
+  }
 }
 
 

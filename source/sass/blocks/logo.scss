@@ -1,5 +1,13 @@
 
 .logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   &__pic {
     width: rem(33);
     height: rem(37);

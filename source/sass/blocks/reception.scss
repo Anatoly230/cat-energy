@@ -13,8 +13,9 @@ $select-thing-clr: $base-green;
   flex-direction: row-reverse;
   justify-content: flex-end;
   align-items: center;
-  
+
   &__label {
+    color: $off-black;
     padding-right: rem(16);
     flex-shrink: 0;
     text-transform: uppercase;
@@ -49,13 +50,19 @@ $select-thing-clr: $base-green;
     }
   }
 
-
-
-  &__field:hover {
-
+  &__field:focus-visible {
+    outline: 2px solid $off-black;
+    outline-offset: -2px;
   }
 
 
+  &__field:hover {
+    border-color: $base-gray;
+  }
+
+  // &__field:invalid:required {
+  //   border-color: red;
+  // }
 
   &__field::placeholder {
     font-family: "oswaldR", "Arial", sans-serif;
@@ -75,8 +82,16 @@ $select-thing-clr: $base-green;
     top: 50%;
     right: 20px;
     fill: $black;
-    transform:translateY(-50%);
+    transform: translateY(-50%);
   }
+
+  .reception:focus-within &__icon {
+    fill: $base-green;
+  }
+
+  // &__field:invalid:required &__icon{
+  //   fill: red;
+  // }
 
   &__choose {
     position: absolute;
@@ -95,11 +110,11 @@ $select-thing-clr: $base-green;
     background-color: $white;
     margin-right: rem(16);
     border-radius: 4px;
-    border: 1px solid $light-gray;
+    border: 1px solid $base-gray;
   }
 
   &__thing:hover {
-    border: 1px solid red;
+    border-color: $very-pale-gray;
   }
 
   &__thing--radio {
@@ -129,15 +144,17 @@ $select-thing-clr: $base-green;
     transform: rotate(315deg);
   }
 
-  &__thing--checkbox {
+
+  .reception__choose:disabled + .reception__label {
+    opacity: 0.3;
   }
 
   .reception__choose:checked + .reception__label > .reception__thing::after {
     opacity: 1;
   }
 
-  .reception__choose:focus + .reception__label {
-    @include show-outline($base-gray);
+  .reception__choose:focus-visible + .reception__label {
+    outline: 2px solid $off-black;
   }
 
   .reception__label:hover .reception__thing {
@@ -152,6 +169,4 @@ $select-thing-clr: $base-green;
   //   border-color: rgba(#000000, 0.3);
   // }
 }
-
-
 

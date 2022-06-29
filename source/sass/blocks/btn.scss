@@ -1,3 +1,6 @@
+$hover-clr: #5eaa2f;
+$hover-show-clr: #ebebeb;
+
 .btn {
   display: block;
   font-size: rem(14);
@@ -15,14 +18,28 @@
   }
 }
 
-// .btn:hover {
-//   background-color: $btn-hover-bg;
-// }
+.btn--empty {
+  background-color: $pale-gray;
+  color: $off-black;
+}
 
-// .btn:active {
-//   background-color: $btn-active-bg;
-//   color: rgba(255, 255, 255, 0.3);
-// }
+
+.btn:hover {
+  background-color: $hover-clr;
+}
+
+.btn:active {
+  color: rgba($white, 0.3);
+}
+
+.btn--empty:hover {
+  background-color: $hover-show-clr;
+}
+
+.btn:active {
+  color: rgba($off-black, 0.3);
+}
+
 
 // .btn:disabled {
 //   background-color: $btn-dsbled-bg;

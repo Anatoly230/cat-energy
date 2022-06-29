@@ -3,6 +3,13 @@
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
+  padding: rem(22) 0 rem(12);
+  justify-content: center;
+
+  @include tablet {
+    padding: 0;
+    margin-bottom: rem(-10);
+  }
 
   &__item {
     @include reset-list-style;
@@ -13,7 +20,12 @@
     margin-right: rem(24);
   }
 
-  &__item-link {
+  &__item:hover &__item-pic {
+    fill: $base-green;
+  }
+
+  &__item:active &__item-pic {
+    opacity: 0.5;
   }
 
   &__item-pic {

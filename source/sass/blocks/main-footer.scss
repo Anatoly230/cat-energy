@@ -52,13 +52,7 @@
   }
 
   &__social-list {
-    padding: rem(22) 0 rem(12);
-    display: flex;
-    justify-content: center;
 
-    @include tablet {
-      padding: 0;
-    }
   }
 
   &__devs-link {
@@ -70,6 +64,7 @@
     align-items: center;
 
     @include tablet {
+      padding: 0;
       justify-content: flex-end;
       width: calc(100/ 3) * 1%;
       justify-content: flex-end;
@@ -84,7 +79,12 @@
     }
   }
 
-  &__devs-logo {
+  &__devs-link:hover &__devs-logo {
+    fill: $base-green;
+  }
+
+  &__devs-link:hover &__devs {
+    color: $off-black;
   }
 }
 

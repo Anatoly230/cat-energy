@@ -1,8 +1,6 @@
-
 .living-example {
   position: relative;
   background-color: $light-gray-sec;
-
   padding-top: rem(25);
   padding-bottom: rem(40);
 
@@ -18,15 +16,14 @@
 
   &::before {
     @include tablet {
-      @include pseudo-el {
-        z-index: 0;
-        position: absolute;
-        width: 100%;
-        height: rem(462);
-        background-color: $light-gray-sec;
-        bottom: 0;
-        left: 0;
-      }
+      @include pseudo-el;
+      z-index: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(462);
+      background-color: $light-gray-sec;
+      bottom: 0;
+      left: 0;
     }
   }
 

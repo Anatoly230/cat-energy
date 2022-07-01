@@ -15,7 +15,8 @@
   &__togles-wrapper {
     // @include show-outline(violet);
     // padding: rem(12) rem(20);
-    padding: rem(12) calc(20 / 320 * 100%);
+    border-bottom: 1px solid $light-gray-sec;
+    padding: rem(12) calc(20 / 320 * 100%) rem(17);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,22 +26,12 @@
     }
   }
 
-  &__logo {
-  }
-
-  &__logo-title {
-  }
-
   &__togle-menu {
     @include tablet {
       display: none;
     }
   }
-
-  &__menu {
-  }
 }
-
 
 // .main-nav {
 //   position: relative;
@@ -78,4 +69,3 @@
 //     display: none;
 //   }
 // }
-

@@ -4,6 +4,7 @@ const mainMenu = document.querySelector(".menu");
 
 
 if (!mainMenu.classList.contains("menu--hide")) {
+
   mainMenu.classList.add("menu--scriptable");
   mainMenu.classList.add("menu--hide");
 } else {

@@ -1,7 +1,5 @@
-
 .main-footer {
   background-color: $pale-gray;
-
 
   &__wrapper {
     display: flex;
@@ -25,9 +23,8 @@
     border-bottom: 2px solid $whity-gray;
 
     @include tablet {
-
       border: none;
-      width: calc(100/ 3) * 1%;
+      width: calc(100 / 3) * 1%;
       padding: 0;
     }
   }
@@ -47,14 +44,6 @@
     }
   }
 
-  &__logo-pic {
-
-  }
-
-  &__social-list {
-
-  }
-
   &__devs-link {
     text-decoration: none;
     color: $black;
@@ -66,8 +55,7 @@
     @include tablet {
       padding: 0;
       justify-content: flex-end;
-      width: calc(100/ 3) * 1%;
-      justify-content: flex-end;
+      width: calc(100 / 3) * 1%;
     }
   }
 
@@ -87,4 +75,3 @@
     color: $off-black;
   }
 }
-

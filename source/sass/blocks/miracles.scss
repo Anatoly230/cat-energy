@@ -1,4 +1,3 @@
-
 .miracles {
   width: min-content;
   margin: 0  auto;
@@ -21,13 +20,10 @@
   }
 
   &__pic-wrapper--it-was &__pic {
-
     height: auto;
 
     @include tablet {
-
       width: rem(677);
-
       transform: translate(-5%);
     }
   }
@@ -45,7 +41,6 @@
   }
 
   &__pic {
-    max-width: initial;
     height: 100%;
     max-width: none;
   }

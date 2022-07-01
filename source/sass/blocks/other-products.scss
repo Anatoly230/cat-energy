@@ -1,7 +1,5 @@
-
 .other-products {
   @include section-wrapper;
-
 
   padding-bottom: rem(35);
 
@@ -49,13 +47,9 @@
     }
   }
 
-  &__item {
-  }
-
   &__present {
     @include desktop {
       grid-area: o;
     }
   }
 }
-

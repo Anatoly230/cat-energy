@@ -41,7 +41,7 @@
     margin-right: auto;
     text-transform: uppercase;
     font-size: rem(16);
-    line-height: calc(20/16);
+    line-height: calc(20 / 16);
     text-align: center;
     margin-bottom: rem(8);
 
@@ -50,20 +50,20 @@
       margin: 0;
       margin-bottom: rem(23);
       font-size: rem(20);
-      line-height: calc(22/20);
+      line-height: calc(22 / 20);
     }
   }
 
   &__desc {
     text-align: center;
     font-size: rem(12);
-    line-height: calc(16/12);
+    line-height: calc(16 / 12);
     margin-bottom: rem(21);
 
     @include tablet {
       max-width: rem(167);
       font-size: rem(16);
-      line-height: calc(18/16);
+      line-height: calc(18 / 16);
       margin: 0;
       margin-bottom: rem(87);
     }
@@ -73,4 +73,3 @@
     width: 100%;
   }
 }
-

@@ -36,10 +36,9 @@ $hover-show-clr: #ebebeb;
   background-color: $hover-show-clr;
 }
 
-.btn:active {
+.btn--empty:active {
   color: rgba($off-black, 0.3);
 }
-
 
 // .btn:disabled {
 //   background-color: $btn-dsbled-bg;

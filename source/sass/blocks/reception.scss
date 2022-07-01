@@ -39,7 +39,7 @@ $select-thing-clr: $base-green;
     margin: 0;
     border: 1px solid $light-gray;
     background-color: $field-bg;
-    color: black;
+    color: $black;
     font-weight: 400;
     font-size: rem(16);
     width: 100%;
@@ -169,4 +169,3 @@ $select-thing-clr: $base-green;
   //   border-color: rgba(#000000, 0.3);
   // }
 }
-

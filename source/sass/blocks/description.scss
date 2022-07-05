@@ -1,6 +1,7 @@
 .description {
   @include section-wrapper;
   padding-top: rem(20);
+  padding-bottom: rem(40);
 
   @include tablet {
     padding-top: rem(30);
@@ -9,33 +10,30 @@
   @include desktop {
     padding-top: rem(80);
   }
+}
 
-  &__list {
-    @include reset-list-style;
+.description__list {
+  @include reset-list-style;
 
-    @include desktop {
-      display: flex;
-      flex-wrap: wrap;
-    }
+  @include desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: rem(80);
+    row-gap: rem(40);
+  }
+}
+
+.description__item {
+  margin-bottom: rem(20);
+
+  @include tablet {
+    margin-bottom: rem(30);
   }
 
-  &__item {
-    margin-bottom: rem(20);
+  @include desktop {
+    margin: 0;
+    flex-basis: calc((1220 - 80) / 2);
+    flex-shrink: 1;
 
-    @include tablet {
-      margin-bottom: rem(30);
-    }
-
-    @include desktop {
-      margin-right: rem(80);
-      margin-bottom: rem(80);
-      width: calc(570 / 1220) * 100%;
-    }
-
-    &:nth-of-type(2n) {
-      @include desktop {
-        margin-right: 0;
-      }
-    }
   }
 }

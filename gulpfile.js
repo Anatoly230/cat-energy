@@ -14,6 +14,7 @@ import svgstore from 'gulp-svgstore';
 import del from 'del';
 import imagemin from 'gulp-imagemin';
 import webp from 'gulp-webp';
+import concat from 'gulp-concat';
 
 
 // Styles
@@ -45,8 +46,8 @@ const html = () => {
 
 const scripts = () => {
   return gulp.src('source/js/*.js')
+    .pipe(concat('script.min.js'))
     .pipe(terser())
-    .pipe(rename('script.min.js'))
     .pipe(gulp.dest('build/js'))
     .pipe(browser.stream());
 }

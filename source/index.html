@@ -4,11 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Передовая кошаяья диета</title>
+  <title>Передовая кошачья диета</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="fonts/Oswald-Regular.woff2" as="font">
-  <link rel="preload" href="fonts/Oswald-Medium.woff2" as="font">
-  <link rel="preload" href="fonts/font.woff" as="font">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/icons/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/icons/favicons/apple.png">
@@ -72,7 +71,7 @@
             alt="Пример упаковки для еды" width="552" height="499">
         </picture>
 
-        <a href="#" class="promo__link btn">Подобрать программу</a>
+        <a href="form.html" class="promo__link btn">Подобрать программу</a>
       </div>
     </section>
   </div>
@@ -165,7 +164,7 @@
                   alt="Кот переедает" width="280" height="232">
               </picture>
             </div>
-            <div class="miracles__pic-wrapper miracles__pic-wrapper--became">
+            <div class="miracles__pic-wrapper miracles__pic-wrapper--became miracles__pic--hide">
               <picture>
                 <source type="image/webp" media="(min-width: 1440px)"
                   srcset="img/index/desktop-skinny.webp 1x, img/index/desktop-skinny@2x.webp 2x">
@@ -183,10 +182,10 @@
           </div>
 
           <div class="living-example__review range-bar">
-            <button class="range-bar__btn">Было</button>
+            <button class="range-bar__btn range-bar__btn--itwas">Было</button>
             <div class="range-bar__pseudo-strip"></div>
             <input class="range-bar__strip" type="range">
-            <button class="range-bar__btn">Стало</button>
+            <button class="range-bar__btn range-bar__btn--became">Стало</button>
           </div>
         </div>
 
@@ -208,15 +207,15 @@
       <div class="contact-us__map-wrapper">
         <picture>
           <source type="image/webp" media="(min-width: 1440px)"
-            srcset="../img/index/desktop-map.webp 1x, ../img/index/desktop-map@2x.webp 2x">
+            srcset="img/index/desktop-map.webp 1x, img/index/desktop-map@2x.webp 2x">
           <source type="image/png" media="(min-width: 1440px)"
-            srcset="../img/index/desktop-map.jpg 1x, ../img/index/desktop-map@2x.jpg 2x">
+            srcset="img/index/desktop-map.jpg 1x, img/index/desktop-map@2x.jpg 2x">
           <source type="image/webp" media="(min-width: 768px)"
-            srcset="../img/index/tablet-map.webp 1x, ../img/index/tablet-map@2x.webp 2x">
+            srcset="img/index/tablet-map.webp 1x, img/index/tablet-map@2x.webp 2x">
           <source type="image/png" media="(min-width: 768px)"
-            srcset="../img/index/tablet-map.jpg 1x, ../img/index/tablet-map@2x.jpg 2x">
-          <img class="contact-us__map-insurance" src="../img/index/mobile-map.jpg" alt="карта расположения магазина"
-            srcset="../img/index/mobile-map@2x.jpg 2x" width="320" height="362">
+            srcset="img/index/tablet-map.jpg 1x, img/index/tablet-map@2x.jpg 2x">
+          <img class="contact-us__map-insurance" src="img/index/mobile-map.jpg" alt="карта расположения магазина"
+            srcset="img/index/mobile-map@2x.jpg 2x" width="320" height="362">
         </picture>
 
 
@@ -262,7 +261,7 @@
           </a>
         </li>
       </ul>
-      <a class="main-footer__item  main-footer__devs-link" href="#">
+      <a class="main-footer__item  main-footer__devs-link" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="main-footer__devs">HTML Academy</span>
         <svg class="main-footer__devs-logo" width="27" height="34">
           <use xlink:href="img/icons/sprite/sprite.svg#academy"></use>

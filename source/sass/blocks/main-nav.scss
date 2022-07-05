@@ -11,61 +11,24 @@
   @include desktop {
     padding: rem(55) 0 rem(30);
   }
+}
 
-  &__togles-wrapper {
-    // @include show-outline(violet);
-    // padding: rem(12) rem(20);
-    border-bottom: 1px solid $light-gray-sec;
-    padding: rem(12) calc(20 / 320 * 100%) rem(17);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.main-nav__togles-wrapper {
+  border-bottom: 1px solid $light-gray-sec;
+  padding: rem(12) calc(20 / 320 * 100%) rem(17);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    @include tablet {
-      @include padding-resset;
-    }
-  }
+  @include tablet {
+    border: none;
 
-  &__togle-menu {
-    @include tablet {
-      display: none;
-    }
+    @include padding-resset;
   }
 }
 
-// .main-nav {
-//   position: relative;
-//   min-height: rem(65);
-//   @include tablet {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//   }
-// }
-
-// .main-nav__togles-wrapper {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   padding: rem(10) rem(20);
-//   @include show-outline(violet);
-// }
-
-// .main-nav__logo {
-//   padding-right: rem(10);
-// }
-
-// .main-nav__logo-title {
-//   padding-right: rem(10);
-
-//   @include tablet {
-//     display: none;
-// }
-// }
-
-
-// .main-nav__togle-menu {
-//   @include tablet {
-//     display: none;
-//   }
-// }
+.main-nav__togle-menu {
+  @include tablet {
+    display: none;
+  }
+}

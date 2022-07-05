@@ -1,38 +1,7 @@
-// .living-example {
-
-//     &__pics-container {
-//         width: 100%;
-//         display: flex;
-//     }
-
-//     &__pic-wrapper {
-
-//         width: 50%;
-//         overflow: hidden;
-//     }
-
-//     &__pic {
-
-//         height: rem(232);
-//         width: auto;
-//         max-width: none;
-//     }
-
-//     &__pic--fat {
-
-//         transform: translateX(54%);
-//     }
-
-//     &__pic--skinny {
-//         transform: translateX(-47%);
-//     }
-// }
-
-
 .procedure {
   @include section-wrapper;
 
-  &__heading {
+  .procedure__heading {
     font-size: rem(36);
     font-weight: 400;
 
@@ -40,25 +9,24 @@
       font-size: rem(60);
     }
   }
+}
 
+.procedure__list {
+  counter-reset: procedur-count;
+  position: relative;
 
-  &__list {
-    counter-reset: procedur-count;
-    position: relative;
+  @include reset-list-style;
+  padding-top: rem(35);
+  padding-bottom: rem(35);
 
-    @include reset-list-style;
-    padding-top: rem(35);
-    padding-bottom: rem(35);
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: rem(60);
+  }
 
-    @include tablet {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-column-gap: rem(60);
-    }
-
-    @include desktop {
-      grid-template-columns: repeat(4, minmax(rem(245), 1fr));
-      grid-column-gap: rem(60);
-    }
+  @include desktop {
+    grid-template-columns: repeat(4, minmax(rem(245), 1fr));
+    grid-column-gap: rem(60);
   }
 }

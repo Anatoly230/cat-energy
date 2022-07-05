@@ -1,18 +1,18 @@
 .assortment {
   @include section-wrapper;
+}
 
-  &__list {
-    @include reset-list-style;
+.assortment__list {
+  @include reset-list-style;
 
-    @include tablet {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-column-gap: rem(60);
-    }
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: rem(60);
+  }
 
-    @include desktop {
-      grid-template-columns: repeat(4, 1fr);
-      grid-column-gap: rem(80);
-    }
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: rem(80);
   }
 }

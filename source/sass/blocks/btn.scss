@@ -23,7 +23,6 @@ $hover-show-clr: #ebebeb;
   color: $off-black;
 }
 
-
 .btn:hover {
   background-color: $hover-clr;
 }
@@ -39,8 +38,3 @@ $hover-show-clr: #ebebeb;
 .btn--empty:active {
   color: rgba($off-black, 0.3);
 }
-
-// .btn:disabled {
-//   background-color: $btn-dsbled-bg;
-//   color: #ffffff;
-// }

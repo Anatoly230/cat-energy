@@ -1,7 +1,6 @@
 .advantages {
   position: relative;
   overflow: hidden;
-
   padding-top: calc(10 / 320 * 100vw);
   padding-bottom: calc(10 / 320 * 100vw);
   display: flex;
@@ -9,79 +8,81 @@
   align-items: center;
 
   @include tablet {
+    justify-content: flex-start;
     align-items: flex-start;
     padding-top: rem(45);
     padding-bottom: rem(94);
     flex-direction: column;
   }
+}
 
-  &::before {
-    @include tablet {
-      @include pseudo-el;
-      counter-increment: procedur-count;
-      content: counter(procedur-count);
-      display: block;
-      position: absolute;
-      color: $pale-gray;
-      top: 50%;
-      left: 50%;
-      transform: translate(-55px, -140px);
-      font-size: rem(280);
-      line-height: 0.9;
-
-      @include desktop {
-        left: auto;
-        top: 0;
-        right: 0;
-        transform: translate(0, 0);
-      }
-    }
-  }
-
-  &::after {
-    order: 1;
-    position: relative;
-
+.advantages::before {
+  @include tablet {
     @include pseudo-el;
+    counter-increment: procedur-count;
+    content: counter(procedur-count);
+    display: block;
+    position: absolute;
+    color: $pale-gray;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55px, -140px);
+    font-size: rem(280);
+    line-height: 0.9;
 
-    padding: rem(30);
-    background-color: $base-green;
-    background-image: url("../img/icons/sprite/leaf.svg");
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: 25px;
-    margin-right: calc(20 / 300 * 100%);
-
-    @include tablet {
-      margin-bottom: rem(31);
+    @include desktop {
+      left: auto;
+      top: 0;
+      right: 0;
+      transform: translate(0, 0);
     }
   }
+}
 
-  &--tub::after {
-    background-image: url("../img/icons/sprite/tub.svg");
-    background-size: 29px;
+.advantages::after {
+  order: 1;
+  position: relative;
+
+  @include pseudo-el;
+
+  padding: rem(30);
+  background-color: $base-green;
+  background-image: url("../img/icons/sprite/leaf.svg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 25px;
+  margin-right: calc(20 / 300 * 100%);
+
+  @include tablet {
+    margin-bottom: rem(31);
   }
+}
 
-  &--eat::after {
-    background-image: url("../img/icons/sprite/eat.svg");
-    background-size: 25px;
-  }
+.advantages--tub::after {
+  background-image: url("../img/icons/sprite/tub.svg");
+  background-size: 29px;
+}
 
-  &--alarm::after {
-    background-image: url("../img/icons/sprite/alarm.svg");
-    background-size: px;
-  }
+.advantages--eat::after {
+  background-image: url("../img/icons/sprite/eat.svg");
+  background-size: 25px;
+}
 
-  &__desc {
-    order: 2;
-    position: relative;
-    width: 100%;
-    max-width: rem(250);
-    line-height: calc(18 / 14);
+.advantages--alarm::after {
+  background-image: url("../img/icons/sprite/alarm.svg");
+  background-size: 25px;
+}
 
-    @include tablet {
-      max-width: rem(205);
-      line-height: calc(24 / 16);
-    }
+.advantages__desc {
+  font-family: "Arial", "Helvetica", sans-serif;
+  order: 2;
+  position: relative;
+  width: 100%;
+  max-width: rem(250);
+  line-height: calc(18 / 14);
+
+  @include tablet {
+    max-width: rem(205);
+    line-height: calc(24 / 16);
   }
 }

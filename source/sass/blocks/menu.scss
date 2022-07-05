@@ -10,75 +10,77 @@ $font-color: $black;
     justify-content: flex-start;
     max-width: rem(441);
   }
+}
 
-  &__item {
-    background-color: $white;
-    text-align: center;
-    border-bottom: 1px solid $light-gray-sec;
 
-    @include tablet {
-      background: none;
-      box-shadow: none;
-    }
+.menu__item {
+  background-color: $white;
+  text-align: center;
+  border-bottom: 1px solid $light-gray-sec;
 
-    &:nth-of-type(3n) &-link {
-      margin: 0;
-    }
+  @include tablet {
+    background: none;
+    box-shadow: none;
+    border: none;
   }
 
-  &__item-link {
-    display: inline-block;
-    width: 100%;
-    padding: rem(23);
-    text-align: center;
-    vertical-align: middle;
+  &:nth-of-type(3n) &-link {
+    margin: 0;
+  }
+}
+
+.menu__item-link {
+  display: inline-block;
+  width: 100%;
+  padding: rem(23);
+  text-align: center;
+  vertical-align: middle;
+  color: $font-color;
+  text-decoration: none;
+  font-size: rem(20);
+  text-transform: uppercase;
+  font-weight: bold;
+
+  @include tablet {
+    width: initial;
+    font-weight: normal;
     color: $font-color;
-    text-decoration: none;
-    font-size: rem(20);
-    text-transform: uppercase;
-    font-weight: bold;
-
-    @include tablet {
-      width: initial;
-      font-weight: normal;
-      color: $font-color;
-      font-size: rem(18);
-      padding: rem(12) 0;
-      margin-right: rem(36);
-    }
+    font-size: rem(18);
+    padding: rem(12) 0;
+    margin-right: rem(36);
   }
+}
 
 
-  &__item-link-index {
-    @include desktop {
-      color: $white;
-    }
+.menu__item-link-index {
+  @include desktop {
+    color: $white;
   }
+}
 
 
-  &__item-link--current {
-    @include tablet {
-      text-decoration: underline;
-      text-decoration-color: $base-green;
-      text-decoration-thickness: 2px;
-      text-underline-offset: 14px;
-    }
+.menu__item-link--current {
+  @include tablet {
+    text-decoration: underline;
+    text-decoration-color: $base-green;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 14px;
   }
+}
 
-  &__item-link--current-index {
-    @include desktop {
-      text-decoration-color: $white;
-    }
+.menu__item-link--current-index {
+  @include desktop {
+    text-decoration-color: $white;
   }
+}
 
-  &__item-link:hover {
-    opacity: 0.6;
-  }
+.menu__item-link:hover {
+  opacity: 0.6;
+}
 
 
-  &__item-link:active {
-    opacity: 0.3;
-  }
+.menu__item-link:active {
+  opacity: 0.3;
 }
 
 .menu--scriptable {

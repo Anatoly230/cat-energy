@@ -2,11 +2,15 @@
   "name": "cat-energy",
   "private": true,
   "description": "второй проект от HTML Academy - cat-energy",
+  "main": "index.js",
+  "homepage": "https://github.com/Anatoly230/cat-energy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.4.0",
     "del": "6.0.0",
+    "gh-pages": "^4.0.0",
     "gulp": "4.0.2",
+    "gulp-concat": "^2.6.1",
     "gulp-dart-sass": "^1.0.2",
     "gulp-htmlmin": "5.0.1",
     "gulp-imagemin": "7.1.0",
@@ -26,6 +30,7 @@
     "stylelint-config-htmlacademy": "0.1.11"
   },
   "scripts": {
+    "deploy": "gh-pages -d build",
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "lint": "npm run editorconfig && npm run stylelint",

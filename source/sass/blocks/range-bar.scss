@@ -5,88 +5,101 @@
   display: flex;
   align-items: center;
   justify-self: space-between;
+}
 
-  &__btn {
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
+.range-bar__btn {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
 
-    @include tablet {
-      text-decoration: underline;
-      text-decoration-style: dashed;
-      text-decoration-color: $base-gray;
-      text-underline-offset: 3px;
-    }
+  @include tablet {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-decoration-color: $base-gray;
+    text-underline-offset: 3px;
   }
+}
 
-  &__btn:hover {
-    opacity: 0.7;
-    @include tablet {
-      opacity: 1;
-      text-decoration-style: solid;
-    }
+.range-bar__btn:hover {
+  opacity: 0.7;
+
+  @include tablet {
+    opacity: 1;
+    text-decoration-style: solid;
   }
+}
 
-  &__btn:active {
-    opacity: 0.5;
-    @include tablet {
-      opacity: 1;
-      text-decoration: none;
-    }
+.range-bar__btn:active {
+  opacity: 0.5;
+
+  @include tablet {
+    opacity: 1;
+    text-decoration: none;
   }
+}
 
-  &__strip {
-    display: none;
+.range-bar__strip {
+  display: none;
 
-    @include tablet {
-      display: initial;
-      appearance: none;
-      outline: none;
-      border-radius: 3px;
-      height: 4px;
-      background-color: $base-gray-two;
-      margin-left: rem(13);
-      margin-right: rem(13);
-      flex-grow: 1;
-    }
-  }
-
-
-
-  &__pseudo-strip {
-    position: relative;
-    display: flex;
-    align-items: stretch;
-    justify-content: flex-start;
-    padding: 4px;
-    border-radius: 6px;
-    border: 1px solid $base-gray;
-    background-color: $white;
-    width: 100%;
-
-    @include tablet {
-      display: none;
-    }
-  }
-
-  &__pseudo-strip::after {
-    z-index: 3;
-    display: flexbox;
-    content: "";
-    height: 6px;
-    width: 50%;
-    background-color: $base-green;
-    border-radius: 6px;
-  }
-
-  &__strip::-webkit-slider-thumb {
+  @include tablet {
+    display: initial;
     appearance: none;
-    width: 34px;
-    height: 34px;
-    box-shadow: 0 0 5px rgba($black, 0.3);
-    border: 13px solid $white;
-    background-color: $base-green;
-    border-radius: 50%;
-    cursor: pointer;
+    outline: none;
+    border-radius: 3px;
+    height: 4px;
+    background-color: $base-gray-two;
+    margin-left: rem(13);
+    margin-right: rem(13);
+    flex-grow: 1;
   }
+}
+
+.range-bar__pseudo-strip {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 4px;
+  border-radius: 6px;
+  border: 1px solid $base-gray;
+  background-color: $white;
+  width: 100%;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.range-bar__pseudo-strip::after {
+  z-index: 3;
+  display: flexbox;
+  content: "";
+  height: 6px;
+  width: 50%;
+  background-color: $base-green;
+  border-radius: 6px;
+}
+
+.range-bar__strip::-webkit-slider-thumb {
+  appearance: none;
+  width: 34px;
+  height: 34px;
+  box-shadow: 0 0 5px rgba($black, 0.3);
+  border: 13px solid $white;
+  background-color: $base-green;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-bar__strip::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 10px rgba($black, 0.3);
+}
+
+.range-bar__strip::-webkit-slider-thumb:active {
+
+  box-shadow: 0 0 5px rgba($black, 0.3);
+  border: 13px solid $white;
+  background-color: $base-green;
+  border-radius: 50%;
+  cursor: pointer;
 }

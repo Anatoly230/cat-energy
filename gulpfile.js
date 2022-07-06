@@ -48,8 +48,10 @@ const html = () => {
 
 const scripts = () => {
   return gulp.src('source/js/*.js')
-    .pipe(concat('script.min.js'))
     .pipe(terser())
+    .pipe(rename({
+      suffix: '.min',
+    }))
     .pipe(gulp.dest('build/js'))
     .pipe(browser.stream());
 }

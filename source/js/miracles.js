@@ -63,3 +63,36 @@ if(rgBeCame.test(e.target.className)) {
 
 }
 })
+
+rangeBar.addEventListener('touchmove', function(e){
+
+if(e.target.classList.value === 'range-bar__strip'){
+
+  if(e.target.value<50){
+
+    pickItWas.style.width = e.target.value + '%';
+    pickBeCame.style.width = 100 - Number(e.target.value) + '%';
+
+  }else{
+
+    pickItWas.style.width = e.target.value + '%';
+    pickBeCame.style.width = 100 - Number(e.target.value) + '%';
+  }
+}
+
+if(rgBeCame.test(e.target.className)) {
+
+ if(!rgHide.test(pickItWas.className)){
+    pickItWas.classList.add(hide);
+    pickBeCame.classList.remove(hide);
+  }
+}else if(rgItWas.test(e.target.className)){
+
+    if(!rgHide.test(pickBeCame.className)){
+
+      pickBeCame.classList.add(hide);
+      pickItWas.classList.remove(hide);
+  }
+
+}
+})

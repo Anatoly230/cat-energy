@@ -14,6 +14,10 @@ import svgstore from 'gulp-svgstore';
 import del from 'del';
 import imagemin from 'gulp-imagemin';
 import webp from 'gulp-webp';
+import concat from 'gulp-concat';
+
+const source = "source";
+const dist = 'build';
 
 // Styles
 
@@ -44,8 +48,8 @@ const html = () => {
 
 const scripts = () => {
   return gulp.src('source/js/*.js')
+    .pipe(concat('script.min.js'))
     .pipe(terser())
-    .pipe(rename('script.min.js'))
     .pipe(gulp.dest('build/js'))
     .pipe(browser.stream());
 }
@@ -83,7 +87,7 @@ const createWebp = () => {
 const svg = () => {
   return gulp.src(['source/img/**/*.svg', '!source/img/icons/sprite/*.svg'])
     .pipe(svgo())
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('build/img/'))
 }
 
 
@@ -95,7 +99,7 @@ const sprite = () => {
       inlineSvg: true
     }))
     .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('build/img/icons/sprite/'));
+    .pipe(gulp.dest('build/img/icons/'));
 }
 
 
@@ -144,8 +148,7 @@ const reload = () => {
 
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
-  gulp.watch('source/sass/**/*.js', gulp.series(scripts));
-  gulp.watch('source/sass/**/*.js', gulp.series(scripts));
+  gulp.watch('source/js/*.js', gulp.series(scripts));
   gulp.watch('source/*.html', gulp.series(html, reload));
 }
 

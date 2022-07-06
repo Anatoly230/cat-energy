@@ -1,21 +1,35 @@
 .social-list {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: rem(22) 0 rem(12);
+  justify-content: center;
+  max-width: 100%;
+
+  @include tablet {
     padding: 0;
-    margin: 0;
-        &__item {
-     @include reset-list-style;
-     margin-bottom: rem(10);    
-    }
-    &__item:not(:last-of-type) {
-        margin-right: rem(24);
-    }
-        &__item-link {
-        }
-    
-        &__item-pic {
-            margin: 0;
-            padding: 0;
-        }
-    
-    }
+    margin-bottom: rem(-10);
+  }
+}
+
+.social-list__item {
+  @include reset-list-style;
+  margin-bottom: rem(10);
+}
+
+.social-list__item:not(:last-of-type) {
+  margin-right: rem(24);
+}
+
+.social-list__item:hover .social-list__item-pic {
+  fill: $base-green;
+}
+
+.social-list__item:active .social-list__item-pic {
+  opacity: 0.5;
+}
+
+.social-list__item-pic {
+  margin: 0;
+  padding: 0;
+}

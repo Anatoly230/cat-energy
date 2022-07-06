@@ -5,13 +5,15 @@
 @import "block-mixins.scss";
 @import "breakpoints.scss";
 @import "global.scss";
-@import "blocks/page.scss";
-@import "blocks/main-header.scss";
-@import "blocks/main-nav.scss";
+@import "blocks/togle-menu.scss";
 @import "blocks/btn.scss";
-@import "blocks/menu.scss";
 @import "blocks/logo.scss";
 @import "blocks/accent-title.scss";
+@import "blocks/page.scss";
+@import "blocks/page-body.scss";
+@import "blocks/menu.scss";
+@import "blocks/main-header.scss";
+@import "blocks/main-nav.scss";
 @import "blocks/social-list.scss";
 @import "blocks/main-footer.scss";
 @import "blocks/promo.scss";
@@ -30,8 +32,9 @@
 @import "blocks/other-products.scss";
 @import "blocks/product.scss";
 @import "blocks/present.scss";
-
-@import "blocks/test.scss";
-
-// @import "blocks/reception.scss";
-@import "blocks/togle-menu.scss";
+@import "blocks/card-empty.scss";
+@import "blocks/fields.scss";
+@import "blocks/form.scss";
+@import "blocks/data.scss";
+@import "blocks/reception.scss";
+@import "blocks/visually-hidden.scss";

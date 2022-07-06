@@ -4,11 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Передовая кошаяья диета</title>
+  <title>Передовая кошачья диета</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="fonts/Oswald-Regular.woff2" as="font">
-  <link rel="preload" href="fonts/Oswald-Medium.woff2" as="font">
-  <link rel="preload" href="fonts/font.woff" as="font">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/icons/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/icons/favicons/apple.png">
@@ -20,25 +19,26 @@
     <header class="page-body__header main-header">
       <nav class="main-nav">
         <div class="main-nav__togles-wrapper">
-          <a class="main-nav__logo main-nav__logo logo " href="#">
+          <a class="main-nav__logo main-nav__logo logo" href="#">
             <span class="visually-hidden">перейти на главную</span>
             <picture>
-              <source media="(min-width: 1440px)" srcset="img/icons/sprite/logo-desktop.svg">
-              <source media="(min-width: 768px)" srcset="img/icons/sprite/logo-tablet.svg">
-              <img class="logo__pic" src="img/icons/sprite/logo-mobile.svg" alt="логотип компании cat energy" width="38"
+              <source media="(min-width: 1440px)" srcset="img/icons/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg">
+              <img class="logo__pic" src="img/icons/logo-mobile.svg" alt="логотип компании cat energy" width="38"
                 height="48">
             </picture>
           </a>
           <a class="main-nav__logo logo" href="#">
-          <svg class="logo__pic-title" width="101" height="18">
-            <use xlink:href="img/icons/sprite/sprite.svg#logo-title"></use>
-          </svg>
+            <svg class="logo__pic-title" width="101" height="18">
+              <use xlink:href="img/icons/sprite.svg#logo-title"></use>
+            </svg>
           </a>
           <button class="main-nav__togle-menu togle-menu"><span class=" visually-hidden">Закрыть</span></button>
         </div>
         <menu class="main-nav__menu menu">
           <li class="menu__item">
-            <a class="menu__item-link menu__item-link-index menu__item-link--current menu__item-link--current-index" href="#">Главная</a>
+            <a class="menu__item-link menu__item-link-index menu__item-link--current menu__item-link--current-index"
+              href="#">Главная</a>
           </li>
           <li class="menu__item">
             <a class="menu__item-link menu__item-link-index " href="catalog.html">Каталог продукции</a>
@@ -46,53 +46,48 @@
           <li class="menu__item">
             <a class="menu__item-link menu__item-link-index" href="form.html">Подбор программы</a>
           </li>
-          <li class="menu__item">
-            <a class="menu__item-link menu__item-link-index" href="test.html">Test page</a>
-          </li>
         </menu>
       </nav>
     </header>
 
     <section class="page__promo promo">
       <div class="promo__content-wrapper">
-      <h2 class="promo__title">Функциональное питание для котов</h2>
-         <p class="promo__desc">Занялся собой? Займись котом!</p>
+        <h2 class="promo__title">Функциональное питание для котов</h2>
+        <p class="promo__desc">Занялся собой? Займись котом!</p>
 
-      <picture>
-        <source type="image/webp" media="(min-width: 1440px)"
-          srcset="img/index/desktop-cup.webp, img/index/desktop-cup@2x.webp 2x">
-        <source type="image/png" media="(min-width: 1440px)"
-          srcset="img/index/desktop-cup.png, img/index/desktop-cup@2x.png 2x">
-        <source type="image/webp" media="(min-width: 768px)"
-          srcset="img/index/tablet-cup.webp, img/index/tablet-cup@2x.webp 2x">
-        <source type="image/png" media="(min-width: 768px)"
-          srcset="img/index/tablet-cup.png, img/index/tablet-cup@2x.png 2x">
-        <img class="promo__pic" src="img/index/mobile-cup.png" srcset="img/index/mobile-cup@2x.png 2x"
-          alt="Пример упаковки для еды" width="552" height="499">
-      </picture>
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)"
+            srcset="img/index/desktop-cup.webp, img/index/desktop-cup@2x.webp 2x">
+          <source type="image/png" media="(min-width: 1440px)"
+            srcset="img/index/desktop-cup.png, img/index/desktop-cup@2x.png 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/index/tablet-cup.webp, img/index/tablet-cup@2x.webp 2x">
+          <source type="image/png" media="(min-width: 768px)"
+            srcset="img/index/tablet-cup.png, img/index/tablet-cup@2x.png 2x">
+          <img class="promo__pic" src="img/index/mobile-cup.png" srcset="img/index/mobile-cup@2x.png 2x"
+            alt="Пример упаковки для еды" width="552" height="499">
+        </picture>
 
-      <a href="#" class="promo__link btn">Подобрать программу</a>
-    </div>
+        <a href="form.html" class="promo__link btn">Подобрать программу</a>
+      </div>
     </section>
   </div>
   <main class="page__content content">
-  <h1 class="visually-hidden">Полезное питание для кошек</h1>
+    <h1 class="visually-hidden">Полезное питание для кошек</h1>
     <section class="content__description description">
       <h2 class="visually-hidden">Описание программ питания</h2>
-      <ul class="description__list"> 
+      <ul class="description__list">
         <li class="description__item descrition-card">
           <p class="descrition-card__heading">Похудение</p>
-          <p class="descrition-card__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора
-            на диету! Cat Energy Slim поможет
-            вашему питомцу сбросить лишний вес.</p>
+          <p class="descrition-card__text">Ваш кот весит больше собаки и&nbsp;почти утратил способность лазить
+            по&nbsp;деревьям? Пора на&nbsp;диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           <a class="descrition-card__link" href="#"><span class="visually-hidden">Каталог для похудения</span>Каталог
             slim</a>
         </li>
         <li class="description__item descrition-card descrition-card--weight-gain">
           <p class="descrition-card__heading">Набор массы</p>
-          <p class="descrition-card__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
-            поможет вашему коту нарастить необходимые
-            мышцы!</p>
+          <p class="descrition-card__text">Заработать авторитет среди дворовых котов и&nbsp;даже собак? Серия Cat Energy
+            Pro поможет вашему коту нарастить необходимые мышцы!</p>
           <a class="descrition-card__link" href="#"><span class="visually-hidden">Каталог для набора массы</span>Каталог
             pro</a>
         </li>
@@ -108,137 +103,133 @@
           </p>
         </li>
         <li class="procedure__item advantages advantages--tub">
-          <p class="advantages__desc">Выпускается в виде порошка,
-            который нужно лишь залить
-            кипятком и готово.
+          <p class="advantages__desc">Выпускается в&nbsp;виде порошка, который нужно лишь залить кипятком и&nbsp;готово.
           </p>
         </li>
         <li class="advantages advantages--eat">
-          <p class="advantages__desc">Замените один-два приема
-            обычной еды на наше
-            функциональное питание.
+          <p class="advantages__desc">Замените <nobr>один-два</nobr> приема обычной еды на&nbsp;наше функциональное
+            питание.
           </p>
         </li>
         <li class="advantages advantages--alarm">
-          <p class="advantages__desc">Уже через месяц наслаждайтесь изменениями к лучшему вашего
-            питомца!
+          <p class="advantages__desc">Уже через месяц наслаждайтесь изменениями к&nbsp;лучшему вашего питомца!
           </p>
         </li>
       </ul>
     </section>
- <section class="content__living-example living-example">
- 
- <div class="living-example__wrapper">
-        
-       <div class="living-example__info-wrapper">
+    <section class="content__living-example living-example">
+
+      <div class="living-example__wrapper">
+
+        <div class="living-example__info-wrapper">
           <h2 class="living-example__heading">Живой пример</h2>
-        <p class="living-example__text">
-          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
-          изнуряющих
-          тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-        </p>
-        <div class="living-example__detailes-wraper">
-        <dl class="living-example__results">
-          <div class="living-example__results-wrapper example">
-            <dt class="example__title">5 кг</dt>
-            <dd class="example__desc">снижение веса</dd>
+          <p class="living-example__text">
+            Борис сбросил 5 кг&nbsp;за&nbsp;2&nbsp;месяца, просто заменив свой обычный корм на&nbsp;Cat Energy Slim.
+            Отличный результат без изнуряющих тренировок! При этом он&nbsp;не&nbsp;менял своих привычек и&nbsp;<nobr>
+              по-прежнему</nobr> спит по&nbsp;16 часов в&nbsp;день.
+          </p>
+          <div class="living-example__detailes-wraper">
+            <dl class="living-example__results">
+              <div class="living-example__results-wrapper example">
+                <dt class="example__title">5 кг</dt>
+                <dd class="example__desc">снижение веса</dd>
+              </div>
+              <div class="living-example__results-wrapper example">
+                <dt class="example__title">60 дней</dt>
+                <dd class="example__desc">затрачено времени</dd>
+              </div>
+            </dl>
+            <p class="living-example__price">
+              <span class="living-example__price-name">Затраты на питание:</span>
+              <span class="living-example__price-value">15 000 РУБ.</span>
+            </p>
           </div>
-          <div class="living-example__results-wrapper example">
-            <dt class="example__title">60 дней</dt>
-            <dd class="example__desc">затрачено времени</dd>
-          </div>
-        </dl>
-        <p class="living-example__price">
-          <span class="living-example__price-name">Затраты на питание:</span>
-          <span class="living-example__price-value">15 000 РУБ.</span> 
-        </p>
         </div>
+        <div class="living-example__difference">
+          <div class="living-example__pics  miracles">
+            <div class="miracles__pic-wrapper miracles__pic-wrapper--it-was">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/index/desktop-fat.webp 1x, img/index/desktop-fat@2x.webp 2x">
+                <source type="image/png" media="(min-width: 1440px)"
+                  srcset="img/index/desktop-fat.png 1x, img/index/desktop-fat@2x.png 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/index/tablet-fat.webp 1x, img/index/tablet-fat@2x.webp 2x">
+                <source type="image/png" media="(min-width: 768px)"
+                  srcset="img/index/tablet-fat.png 1x, img/index/tablet-fat@2x.png 2x">
+                <img class="miracles__pic" src="img/index/mobile-fat.png" srcset="img/index/mobile-fat@2x.png 2x"
+                  alt="Кот переедает" width="280" height="232">
+              </picture>
+            </div>
+            <div class="miracles__pic-wrapper miracles__pic-wrapper--became miracles__pic--hide">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/index/desktop-skinny.webp 1x, img/index/desktop-skinny@2x.webp 2x">
+                <source type="image/png" media="(min-width: 1440px)"
+                  srcset="img/index/desktop-skinny.png 1x, img/index/desktop-skinny@2x.png 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/index/tablet-skinny.webp 1x, img/index/tablet-skinny@2x.webp 2x">
+                <source type="image/png" media="(min-width: 768px)"
+                  srcset="img/index/tablet-skinny.png 1x, img/index/tablet-skinny@2x.png 2x">
+                <img class="miracles__pic" src="img/index/mobile-skinny.png" srcset="img/index/mobile-skinny@2x.png 2x"
+                  alt="Кот не доедает" width="245" height="232">
+              </picture>
+            </div>
+
+          </div>
+
+          <div class="living-example__review range-bar">
+            <button class="range-bar__btn range-bar__btn--it-was">Было</button>
+            <div class="range-bar__pseudo-strip"></div>
+            <input class="range-bar__strip" type="range">
+            <button class="range-bar__btn range-bar__btn--became">Стало</button>
+          </div>
+        </div>
+
       </div>
-      <div class="living-example__difference">
-        <div class="living-example__pics  miracles">
-         <div class="miracles__pic-wrapper miracles__pic-wrapper--it-was">
-          <picture>
-            <source type="image/webp" media="(min-width: 1440px)"
-              srcset="img/index/desktop-fat.webp 1x, img/index/desktop-fat@2x.webp 2x">
-            <source type="image/png" media="(min-width: 1440px)"
-              srcset="img/index/desktop-fat.png 1x, img/index/desktop-fat@2x.png 2x">
-            <source type="image/webp" media="(min-width: 768px)"
-              srcset="img/index/tablet-fat.webp 1x, img/index/tablet-fat@2x.webp 2x">
-            <source type="image/png" media="(min-width: 768px)"
-              srcset="img/index/tablet-fat.png 1x, img/index/tablet-fat@2x.png 2x">
-            <img class="miracles__pic" src="img/index/mobile-fat.png"
-              srcset="img/index/mobile-fat@2x.png 2x" alt="Кот переедает" width="280" height="232">
-          </picture>
-          </div>
-          <div class="miracles__pic-wrapper miracles__pic-wrapper--became">
-          <picture>
-            <source type="image/webp" media="(min-width: 1440px)"
-              srcset="img/index/desktop-skinny.webp 1x, img/index/desktop-skinny@2x.webp 2x">
-            <source type="image/png" media="(min-width: 1440px)"
-              srcset="img/index/desktop-skinny.png 1x, img/index/desktop-skinny@2x.png 2x">
-            <source type="image/webp" media="(min-width: 768px)"
-              srcset="img/index/tablet-skinny.webp 1x, img/index/tablet-skinny@2x.webp 2x">
-            <source type="image/png" media="(min-width: 768px)"
-              srcset="img/index/tablet-skinny.png 1x, img/index/tablet-skinny@2x.png 2x">
-            <img class="miracles__pic" src="img/index/mobile-skinny.png"
-              srcset="img/index/mobile-skinny@2x.png 2x" alt="Кот не доедает" width="245" height="232">
-          </picture>
-          </div>
-   
-        </div>  
-   
-        <div class="living-example__review range-bar">
-         <button class="range-bar__btn">Было</button>
-         <input class="range-bar__strip" type="range">
-         <button class="range-bar__btn">Стало</button>
-       </div>
-       </div>
-
-  </div>
-
-
     </section>
-   <section class="content__contact-us contact-us">
+    <section class="content__contact-us contact-us">
       <h2 class="visually-hidden">Как нас найти</h2>
       <div class="contact-us__wrapper">
-      <div class="contact-us__info">
-        <p class="contact-us__lead">
-          Приглашаем к сотрудничеству дилеров!
-        </p>
-        <address class="contact-us__addres">
-         <span class="contact-us__addres-street">ул. Большая Конюшенная, д. 19/8</span><span class="contact-us__addres-city">Санкт-Петербург</span>
-        </address>
+        <div class="contact-us__info">
+          <p class="contact-us__lead">
+            Приглашаем к сотрудничеству дилеров!
+          </p>
+          <address class="contact-us__addres">
+            <span class="contact-us__addres-street">ул. Большая Конюшенная, д. 19/8</span><span
+              class="contact-us__addres-city">Санкт-Петербург</span>
+          </address>
+        </div>
       </div>
-    </div>
-  <div class="contact-us__map-wrapper">
-    <picture>
-      <source type="image/webp" media="(min-width: 1440px)"
-        srcset="../img/index/desktop-map.webp 1x, ../img/index/desktop-map@2x.webp 2x">
-      <source type="image/png" media="(min-width: 1440px)"
-        srcset="../img/index/desktop-map.jpg 1x, ../img/index/desktop-map@2x.jpg 2x">
-      <source type="image/webp" media="(min-width: 768px)"
-        srcset="../img/index/tablet-map.webp 1x, ../img/index/tablet-map@2x.webp 2x">
-      <source type="image/png" media="(min-width: 768px)"
-        srcset="../img/index/tablet-map.jpg 1x, ../img/index/tablet-map@2x.jpg 2x">
-        <img class="contact-us__map-insurance" src="../img/index/mobile-map.jpg" alt="карта расположения магазина"
-        srcset="../img/index/mobile-map@2x.jpg 2x" width="320" height="362">
-    </picture>
+      <div class="contact-us__map-wrapper">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)"
+            srcset="img/index/desktop-map.webp 1x, img/index/desktop-map@2x.webp 2x">
+          <source type="image/png" media="(min-width: 1440px)"
+            srcset="img/index/desktop-map.jpg 1x, img/index/desktop-map@2x.jpg 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/index/tablet-map.webp 1x, img/index/tablet-map@2x.webp 2x">
+          <source type="image/png" media="(min-width: 768px)"
+            srcset="img/index/tablet-map.jpg 1x, img/index/tablet-map@2x.jpg 2x">
+          <img class="contact-us__map-insurance" src="img/index/mobile-map.jpg" alt="карта расположения магазина"
+            srcset="img/index/mobile-map@2x.jpg 2x" width="320" height="362">
+        </picture>
 
-       
-      <iframe class="contact-us__map"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2237.4008564625838!2d37.6357461163052!3d55.89040698059036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5372cafd22be1%3A0x4718a89e0c347737!2z0JzQtdC40LrQn9GA0L4!5e0!3m2!1sru!2sru!4v1650029500447!5m2!1sru!2sru"
-      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+
+        <iframe class="contact-us__map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2237.4008564625838!2d37.6357461163052!3d55.89040698059036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5372cafd22be1%3A0x4718a89e0c347737!2z0JzQtdC40LrQn9GA0L4!5e0!3m2!1sru!2sru!4v1650029500447!5m2!1sru!2sru"
+          width="600" height="450" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </section>
-    </main>
+  </main>
 
-    <footer class="page-body__footer main-footer">
-      <div class="main-footer__wrapper">
-      <a href="#" class="main-footer__item  main-footer__logo-link">
+  <footer class="page-body__footer main-footer">
+    <div class="main-footer__wrapper">
+      <a href="#" class="main-footer__item  main-footer__logo-link logo">
         <span class="visually-hidden">перейти на главную</span>
         <svg class="main-footer__logo-pic" width="128" height="24">
-          <use xlink:href="img/icons/sprite/sprite.svg#logo-title"></use>
+          <use xlink:href="img/icons/sprite.svg#logo-title"></use>
         </svg>
       </a>
       <ul class="main-footer__item main-footer__social-list social-list">
@@ -246,7 +237,7 @@
           <a class="social-list__item-link" href="#">
             <span class="visually-hidden">мы во Вконтакте</span>
             <svg class="social-list__item-pic" width="26" height="17">
-              <use xlink:href="img/icons/sprite/sprite.svg#vk"></use>
+              <use xlink:href="img/icons/sprite.svg#vk"></use>
             </svg>
           </a>
         </li>
@@ -254,7 +245,7 @@
           <a class="social-list__item-link" href="#">
             <span class="visually-hidden">мы на Youtube</span>
             <svg class="social-list__item-pic" width="24" height="19">
-              <use xlink:href="img/icons/sprite/sprite.svg#yt"></use>
+              <use xlink:href="img/icons/sprite.svg#yt"></use>
             </svg>
           </a>
         </li>
@@ -262,21 +253,22 @@
           <a class="social-list__item-link" href="#">
             <span class="visually-hidden">наш канал в телеграмм</span>
             <svg class="social-list__item-pic" width="20" height="17">
-              <use xlink:href="img/icons/sprite/sprite.svg#tm"></use>
+              <use xlink:href="img/icons/sprite.svg#tm"></use>
             </svg>
           </a>
         </li>
       </ul>
-      <a class="main-footer__item  main-footer__devs-link" href="#">
+      <a class="main-footer__item  main-footer__devs-link" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="main-footer__devs">HTML Academy</span>
         <svg class="main-footer__devs-logo" width="27" height="34">
-          <use xlink:href="img/icons/sprite/sprite.svg#academy"></use>
+          <use xlink:href="img/icons/sprite.svg#academy"></use>
         </svg>
       </a>
-      </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script src="js/script.min.js"></script>
+
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>

@@ -10,16 +10,18 @@ $font-color: $black;
     justify-content: flex-start;
     max-width: rem(441);
   }
+}
 
-  &__item {
+
+.menu__item {
   background-color: $white;
   text-align: center;
-  box-shadow: 0 0 2px $black;
+  border-bottom: 1px solid $light-gray-sec;
 
   @include tablet {
     background: none;
     box-shadow: none;
-
+    border: none;
   }
 
   &:nth-of-type(3n) &-link {
@@ -27,7 +29,7 @@ $font-color: $black;
   }
 }
 
-&__item-link {
+.menu__item-link {
   display: inline-block;
   width: 100%;
   padding: rem(23);
@@ -39,7 +41,7 @@ $font-color: $black;
   text-transform: uppercase;
   font-weight: bold;
 
-@include tablet {
+  @include tablet {
     width: initial;
     font-weight: normal;
     color: $font-color;
@@ -47,169 +49,55 @@ $font-color: $black;
     padding: rem(12) 0;
     margin-right: rem(36);
   }
-
 }
 
 
-&__item-link-index {
+.menu__item-link-index {
   @include desktop {
     color: $white;
   }
 }
 
 
-&__item-link--current {
- 
+.menu__item-link--current {
   @include tablet {
     text-decoration: underline;
     text-decoration-color: $base-green;
-    text-decoration-thickness:2px;
+    text-decoration-thickness: 2px;
     text-underline-offset: 14px;
   }
+}
 
-
-} 
-
-&__item-link--current-index {
+.menu__item-link--current-index {
   @include desktop {
     text-decoration-color: $white;
   }
 }
 
+.menu__item-link:hover {
+  opacity: 0.6;
+}
+
+
+.menu__item-link:active {
+  opacity: 0.3;
+}
+
+.menu--scriptable {
+  position: absolute;
+  top: 65;
+  left: 0;
+  width: 100%;
+
+  text-transform: uppercase;
+  transition-duration: 0.4s;
+  transition-property: top;
+
+  @media (min-width: $tablet-width) {
+    position: static;
   }
+}
 
-
-
-
-
-// .menu__item:nth-of-type(2n) .menu__item-link {
-//   color: red;
-// }
-// .menu :nth-of-type(3n) .menu__item-link{
-//   color: red;
-// }
-
-
-
-// .menu {
-//   @include reset-list-style;
-//   width: 100%;
-//   @include show-outline(red);
-//   @media (min-width: $tablet-width) {
-
-//     display: flex;
-//     align-items: center;
-//     align-content: center;
-//     height: 100%;
-//     flex-direction: row;
-//     background-color: $white;
-//     justify-content: flex-end;
-//     flex-wrap: wrap;
-//     align-content: stretch;
-//   }
-// }
-
-// .menu :nth-of-type(2),
-// .menu :nth-of-type(4n+2) {
-//   @media (min-width: $tablet-width) {
-//     margin-right: 20%;
-//   }
-// }
-
-// .menu--scriptable {
-//   position: absolute;
-//   top: 65;
-//   left: 0;
-
-//   text-transform: uppercase;
-//   transition-duration: 0.4s;
-//   transition-property: top;
-
-//   @media (min-width: $tablet-width) {
-//     position: static;
-//   }
-// }
-
-// .menu--hide {
-//   top: rem(-2000);
-// }
-
-// .menu__item {
-//   width: 100%;
-//   background-color: $white;
-//   text-align: center;
-//   box-shadow: 0 0 2px $black;
-
-//   @media (min-width: $tablet-width) {
-//     background: none;
-//     box-shadow: none;
-//     @include part-of-block(3);
-//   }
-// }
-
-// .menu__item:hover {
-//   @media (max-width: $mobile-only) {
-//     background: $mob-men-hover;
-//   }
-// }
-
-// .menu__item:active {
-//   @media (max-width: $mobile-only) {
-//     background: $mob-men-active;
-//   }
-// }
-
-
-// .menu__item:last-of-type::after {
-//   @media (max-width: $mobile-only) {
-//     position: absolute;
-//     display: inline-block;
-//     bottom: 0;
-//     left: 0;
-//     content: "";
-//     width: 100%;
-//     height: rem(7);
-//     box-shadow: inset 0 -3px 5px rgba(#000000, 0.2);
-//   }
-// }
-
-// .menu__item-link {
-//   display: inline-block;
-//   width: 100%;
-//   padding: rem(23);
-//   text-align: center;
-//   vertical-align: middle;
-//   color: $font-color;
-//   text-decoration: none;
-//   font-size: rem(20);
-//   text-transform: uppercase;
-//   font-weight: bold;
-
-//   @media (min-width: $tablet-width) {
-//     width: initial;
-//     font-weight: normal;
-//     color: $font-color;
-//     font-size: rem(18);
-//     padding: rem(14) rem(5);
-//   }
-// }
-
-// .menu__item-link:hover {
-//   @media (min-width: $tablet-width) {
-//     color: $menu-hover;
-//   }
-// }
-
-// .menu__item-link:active {
-//   color: rgba($mob-m-font, 0.3);
-
-//   @media (min-width: $tablet-width) {
-//     color: $btn-dsbled-bg;
-//   }
-// }
-
-// .menu__item-link--current {
-//   @media (min-width: $tablet-width) {
-//     color: $current-link-clr;
-//   }
-// }
+.menu--hide {
+  top: rem(-2000);
+}

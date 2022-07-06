@@ -21,15 +21,14 @@
     display: none;
   }
 }
-// .miracles__pic-wrapper--became {
-//   @include mobile-only {
-//     display: none;
-//   }
-// }
+.miracles__pic-wrapper--became {
 
-// .miracles__pic {
-//   height: auto;
-// }
+  @include tablet {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
 
 .miracles__pic {
   height: 100%;
@@ -39,7 +38,8 @@
 .miracles__pic-wrapper--it-was .miracles__pic {
   @include tablet {
     width: rem(677);
-    transform: translate(-5%);
+    transform-origin: right;
+    transform: translate(-6%);
   }
 }
 
@@ -53,7 +53,7 @@
 .miracles__pic-wrapper--became .miracles__pic {
   @include tablet {
     width: rem(545);
-    transform: translate(-48%);
+    transform: translateX(-2%);
   }
 }
 

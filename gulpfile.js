@@ -16,6 +16,8 @@ import imagemin from 'gulp-imagemin';
 import webp from 'gulp-webp';
 import concat from 'gulp-concat';
 
+const source = "source";
+const dist = 'build';
 
 // Styles
 
@@ -85,7 +87,7 @@ const createWebp = () => {
 const svg = () => {
   return gulp.src(['source/img/**/*.svg', '!source/img/icons/sprite/*.svg'])
     .pipe(svgo())
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('build/img/'))
 }
 
 
@@ -97,7 +99,7 @@ const sprite = () => {
       inlineSvg: true
     }))
     .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('build/img/icons/sprite/'));
+    .pipe(gulp.dest('build/img/icons/'));
 }
 
 

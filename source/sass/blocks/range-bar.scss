@@ -8,8 +8,9 @@
 }
 
 .range-bar__btn {
+  text-transform: uppercase;
   border: none;
-  cursor: pointer;
+
   background-color: transparent;
 
   @include tablet {
@@ -22,6 +23,7 @@
 
 .range-bar__btn:hover {
   opacity: 0.7;
+  cursor: pointer;
 
   @include tablet {
     opacity: 1;
@@ -42,19 +44,21 @@
   display: none;
 
   @include tablet {
+    margin-left: rem(20);
+    margin-right: rem(20);
     display: initial;
     appearance: none;
     outline: none;
     border-radius: 3px;
     height: 4px;
     background-color: $base-gray-two;
-    margin-left: rem(13);
-    margin-right: rem(13);
     flex-grow: 1;
   }
 }
 
 .range-bar__pseudo-strip {
+  margin-left: rem(15);
+  margin-right: rem(15);
   position: relative;
   display: flex;
   align-items: stretch;

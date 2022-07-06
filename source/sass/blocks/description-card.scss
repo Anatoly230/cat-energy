@@ -46,7 +46,7 @@
       height: rem(194);
     }
 
-    background-image: url("../img/icons/sprite/cat-up.svg");
+    background-image: url("../img/icons/cat-up.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -54,7 +54,7 @@
 }
 
 .descrition-card--weight-gain::after {
-  background-image: url("../img/icons/sprite/cat-down.svg");
+  background-image: url("../img/icons/cat-down.svg");
 }
 
 .descrition-card__heading {
@@ -106,7 +106,7 @@
       height: rem(55);
     }
 
-    background-image: url("../img/icons/sprite/cat-up.svg");
+    background-image: url("../img/icons/cat-up.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -125,7 +125,7 @@
 }
 
 .descrition-card--weight-gain .descrition-card__heading::after {
-  background-image: url("../img/icons/sprite/cat-down.svg");
+  background-image: url("../img/icons/cat-down.svg");
 }
 
 
@@ -163,7 +163,7 @@
     content: "";
     width: 32px;
     height: 12px;
-    background-image: url("../img/icons/sprite/arrow.svg");
+    background-image: url("../img/icons/arrow.svg");
     background-size: 32px auto;
     background-position: -8px center;
     background-repeat: no-repeat;

@@ -47,7 +47,7 @@
 
   padding: rem(30);
   background-color: $base-green;
-  background-image: url("../img/icons/sprite/leaf.svg");
+  background-image: url("../img/icons/leaf.svg");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: 25px;
@@ -59,18 +59,18 @@
 }
 
 .advantages--tub::after {
-  background-image: url("../img/icons/sprite/tub.svg");
+  background-image: url("../img/icons/tub.svg");
   background-size: 29px;
 }
 
 .advantages--eat::after {
-  background-image: url("../img/icons/sprite/eat.svg");
+  background-image: url("../img/icons/eat.svg");
   background-size: 25px;
 }
 
 .advantages--alarm::after {
-  background-image: url("../img/icons/sprite/alarm.svg");
-  background-size: 25px;
+  background-image: url("../img/icons/alarm.svg");
+  background-size: 30px;
 }
 
 .advantages__desc {

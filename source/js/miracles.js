@@ -32,7 +32,7 @@ let hide = "miracles__pic--hide"
 
 rangeBar.addEventListener('click', function(e){
 
-console.log(e.target.value)
+
 if(e.target.classList.value === 'range-bar__strip'){
 
   if(e.target.value<50){
@@ -66,7 +66,6 @@ if(rgBeCame.test(e.target.className)) {
 
 rangeBar.addEventListener('touchmove', function(e){
 
-console.log(e.target.value)
 if(e.target.classList.value === 'range-bar__strip'){
 
   if(e.target.value<50){
